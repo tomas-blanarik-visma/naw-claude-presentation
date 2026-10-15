@@ -1,0 +1,25 @@
+{
+  "name": "naw-claude-presentation",
+  "version": "1.0.0",
+  "description": "NAW — Native Agentic Workflow: conference talk (SK)",
+  "scripts": {
+    "serve": "python3 -m http.server 8765 --bind 127.0.0.1",
+    "check": "node tools/check.mjs",
+    "pdf": "node tools/check.mjs --pdf",
+    "video": "node tools/render-video.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@fontsource/inter-tight": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "reveal.js": "^5.2.1"
+  },
+  "devDependencies": {
+    "pdf-lib": "^1.17.1",
+    "puppeteer-core": "^23.11.1"
+  },
+  "private": true
+}

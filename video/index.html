@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>NAW promo video</title>
+<link rel="stylesheet" href="video.css">
+</head>
+<body>
+<div id="stage">
+
+  <!-- hook · one small feature -->
+  <section class="scene" id="hook">
+    <div class="kicker-top" id="hook-kick">MONDAY · 09:00</div>
+    <div class="term" style="left:260px;right:260px;top:330px;height:420px">
+      <div class="bar"><i></i><i></i><i></i><span>~/customer-app — claude</span></div>
+      <div class="body"><div class="ln"><span class="prompt">› </span><span id="hook-type"></span><span class="cursor" id="hook-cur"></span></div><div class="ln"></div><div class="ln agent" id="hook-reply"></div></div>
+    </div>
+  </section>
+
+  <!-- frenzy · 47 files -->
+  <section class="scene" id="frenzy">
+    <div class="term">
+      <div class="bar"><i></i><i></i><i></i><span>~/customer-app — claude --dangerously-skip-permissions</span></div>
+      <div class="body" id="frenzy-body"></div>
+    </div>
+    <div class="status"><span><b id="frenzy-files">0</b> files changed</span><span class="green" id="frenzy-lines">+0</span><span>tests: ✅ (0 ran)</span><span>confidence: <b>100 %</b></span></div>
+    <div class="heat" id="frenzy-heat"></div>
+    <div class="done" id="frenzy-done">✔ Successfully implemented.</div>
+  </section>
+
+  <!-- damage · consequences -->
+  <section class="scene" id="damage">
+    <div id="damage-debris"></div>
+    <div class="stack">
+      <p class="big" id="damage-a">Invented APIs.</p>
+      <p class="big" id="damage-b">Zero tests.</p>
+      <p class="big red" id="damage-c">Very proud.</p>
+    </div>
+  </section>
+
+  <!-- harder · prompt harder -->
+  <section class="scene" id="harder">
+    <div class="term" style="left:200px;right:200px;top:300px;height:440px">
+      <div class="bar"><i></i><i></i><i></i><span>~/customer-app — claude</span></div>
+      <div class="body"><div class="ln"><span class="prompt">› </span><span id="harder-type"></span><span class="cursor" id="harder-cur"></span></div><div class="ln"></div><div class="ln agent" id="harder-reply"></div></div>
+    </div>
+    <div class="rocket" id="harder-rocket">🚀</div>
+  </section>
+
+  <!-- model · not the model -->
+  <section class="scene" id="model">
+    <div class="center">
+      <p class="big" id="model-head">Don't prompt harder.</p>
+      <div class="sub" id="model-sub">Even a brilliant new hire needs onboarding.</div>
+      <div class="pieces" id="model-pieces">
+        <span class="piece">CONTEXT</span><span class="piece">PLAN</span><span class="piece">TOOLS</span><span class="piece">REVIEW</span><span class="piece model">MODEL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- meet · NAW -->
+  <section class="scene" id="meet">
+    <div class="center" style="justify-content:flex-start;padding-top:190px">
+      <div class="logo" id="meet-logo">NAW<span class="dot">.</span></div>
+      <div class="sub" id="meet-sub">Native Agentic Workflow · lives in your repo</div>
+      <div class="files" id="meet-files"><span>.claude/agents</span><span>.claude/commands</span><span>.claude/hooks</span><span>docs/</span></div>
+    </div>
+    <div class="team-row" id="meet-team"><span>🧭 planner</span><span>💻 developer</span><span>🧐 reviewer</span><span>🔎 verifier</span><span>📝 docs</span></div>
+  </section>
+
+  <!-- questions · brainstorm first -->
+  <section class="scene" id="questions">
+    <div class="term" style="left:150px;right:150px;top:120px;height:760px">
+      <div class="bar"><i></i><i></i><i></i><span>~/customer-app — claude</span></div>
+      <div class="body small"><div class="ln"><span class="prompt">› </span><span id="questions-type"></span><span class="cursor" id="questions-cur"></span></div><div id="questions-out"></div></div>
+    </div>
+  </section>
+
+  <!-- breakdown · feature → epics → stories -->
+  <section class="scene" id="breakdown">
+    <div class="tree" id="breakdown-tree">
+      <div class="tl"><span class="tag f">FEATURE</span> Customer-Export</div>
+      <div class="tl d1"><span class="dim">├─</span> <span class="tag e">EPIC</span> Export-Pipeline</div>
+      <div class="tl d2"><span class="dim">├─</span> <span class="tag s">01-01</span> Export job model <span class="ac">AC ✔ deps ✔</span></div>
+      <div class="tl d2"><span class="dim">├─</span> <span class="tag s">01-02</span> Stream CSV writer <span class="ac">AC ✔ deps ✔</span></div>
+      <div class="tl d2"><span class="dim">├─</span> <span class="tag s">01-03</span> PII mask adapter <span class="ac">AC ✔ deps ✔</span></div>
+      <div class="tl d2"><span class="dim">└─</span> <span class="tag s">01-04</span> Audit log <span class="ac">AC ✔ deps ✔</span></div>
+      <div class="tl d1"><span class="dim">├─</span> <span class="tag e">EPIC</span> Access-And-Privacy</div>
+      <div class="tl d1"><span class="dim">└─</span> <span class="tag e">EPIC</span> Export-UI</div>
+    </div>
+    <div class="note-right" id="breakdown-note">Same words as your Jira.</div>
+  </section>
+
+  <!-- team · one job each -->
+  <section class="scene" id="team">
+    <div class="chat" id="team-chat">
+      <div class="msg"><div class="av">🧭</div><div><div class="who"><b>Planner</b> · 16:01</div><div class="txt">4 stories, in waves. Go.</div></div></div>
+      <div class="msg"><div class="av">💻</div><div><div class="who"><b>Developer</b> · 16:02</div><div class="txt">Done. +412 lines in one file. Ship it?</div></div></div>
+      <div class="msg no"><div class="av">🧐</div><div><div class="who"><b>Reviewer</b> · 16:03</div><div class="txt">No. That class does four things.</div></div></div>
+      <div class="msg"><div class="av">💻</div><div><div class="who"><b>Developer</b> · 16:05</div><div class="txt">Fixed. Three classes, tests still green.</div></div></div>
+    </div>
+  </section>
+
+  <!-- evidence · verifier -->
+  <section class="scene" id="evidence">
+    <div class="report" id="evidence-report">
+      <div class="rh">🔎 VERIFICATION · Export-Pipeline <span class="dim">· live stack</span></div>
+      <div class="ac-row ok">✔ AC-1 &nbsp;CSV contains the filtered customers</div>
+      <div class="ac-row ok">✔ AC-2 &nbsp;e-mail masked → j***@example.com</div>
+      <div class="ac-row ok">✔ AC-3 &nbsp;only the caller's own tenant</div>
+      <div class="ac-row ok">✔ AC-4 &nbsp;large exports run in the background</div>
+      <div class="ac-row err">✖ AC-5 &nbsp;export written to the audit log</div>
+      <div class="ac-foot warn" id="evidence-foot">→ gap story 01-05 created · skeptic re-checked 4/4 passes</div>
+    </div>
+  </section>
+
+  <!-- guard · guardrails -->
+  <section class="scene" id="guard">
+    <div class="term">
+      <div class="bar"><i></i><i></i><i></i><span>epic-executor · story 01-02</span></div>
+      <div class="body"><div class="ln"><span class="prompt">› </span><span id="guard-type"></span><span class="cursor" id="guard-cur"></span></div><div id="guard-out"></div></div>
+    </div>
+    <div class="flash" id="guard-flash"></div>
+    <div class="stamp" id="guard-stamp">Not today.</div>
+  </section>
+
+  <!-- auto · team-run -->
+  <section class="scene" id="auto">
+    <div class="term lead"><div class="bar"><i></i><i></i><i></i><span>epic-team-lead</span></div><div class="body small" id="auto-lead"></div></div>
+    <div class="term pane p1"><div class="bar"><span>💻 01-02 · worktree</span></div><div class="body tiny" id="auto-p1"></div></div>
+    <div class="term pane p2"><div class="bar"><span>💻 01-03 · worktree</span></div><div class="body tiny" id="auto-p2"></div></div>
+    <div class="term pane p3"><div class="bar"><span>🧐 reviewer</span></div><div class="body tiny" id="auto-p3"></div></div>
+  </section>
+
+  <!-- same · same model -->
+  <section class="scene" id="same">
+    <div class="cols">
+      <div class="model-chip">same model · same price per token</div>
+      <div class="col bad" id="same-l"><h3 class="red">PROMPT &amp; PRAY</h3>
+        <span class="chip">47 files changed</span><span class="chip">customerApi.exportAll()</span><span class="chip">✅ 0 tests ran</span><span class="chip">utils2.ts</span><span class="chip">trust me</span></div>
+      <div class="col good" id="same-r"><h3 class="green">WITH NAW</h3>
+        <span class="chip">✔ questions first</span><span class="chip">✔ stories</span><span class="chip">✔ review passed</span><span class="chip">✔ 5/5 criteria</span><span class="chip">✔ docs &amp; ADR</span><span class="chip">✔ PR #482</span></div>
+    </div>
+    <div class="tag"><p class="mid" id="same-tag">Same model. <span class="green">Different system.</span></p></div>
+  </section>
+
+  <!-- end · card -->
+  <section class="scene" id="end">
+    <div class="center">
+      <div class="logo" style="font-size:200px">NAW<span class="dot">.</span></div>
+      <p class="mid" id="end-line" style="margin-top:30px">Own the workflow. <span class="green">Rent the intelligence.</span></p>
+      <div class="install" id="end-install"><span class="prompt">› </span>/plugin install naw@idella-plugin-marketplace</div>
+    </div>
+  </section>
+
+  <div id="fade"></div>
+</div>
+
+<audio id="mix" src="build/audio.mp3" preload="none"></audio>
+<script src="timeline.js"></script>
+<script src="video.js"></script>
+</body>
+</html>

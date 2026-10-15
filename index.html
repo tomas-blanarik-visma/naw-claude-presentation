@@ -1,0 +1,1726 @@
+<!doctype html>
+<html lang="sk">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NAW — Native Agentic Workflow</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="vendor/reveal/reset.css">
+  <link rel="stylesheet" href="vendor/reveal/reveal.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/slides.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ═════════════ AKT 1 — PROBLÉM ═════════════ -->
+
+      <!-- S01 -->
+      <section id="s01" data-timing="45">
+        <div class="center">
+          <div class="term lg title-term" data-demo="s01" data-play="enter" data-delay="2500" id="t-s01">
+            <div class="term-head"><i></i><i></i><i></i>~/naw-framework</div>
+            <div class="term-body"></div>
+          </div>
+          <h1 class="punch title-reveal">NAW <span class="muted">—</span> Native Agentic Workflow</h1>
+          <div class="sub title-reveal">Ako z AI juniora urobiť med...seniora?!</div>
+        </div>
+        <div class="footer-id">Tomas Blanarik · Visma / Norvato</div>
+        <aside class="notes">
+          „Dobrý deň. Kto z vás už dnes niečo napísal s AI? Ruky hore. … A kto to potom celé prepisoval? Aha, tie ruky
+          ostali hore. No a presne o tom to dnes bude.
+
+          Volám sa Tomas Blanarik, robím vo Visme / Norvato. Nebudem vám rozprávať, ktorý model je najlepší. Budem
+          rozprávať o tom, čo všetko musí byť okolo modelu, aby ste mu mohli veriť aspoň tak ako stážistovi v piatok o
+          štvrtej.“
+
+          Animácia: kurzor ~2,5 s bliká, potom sa napíše „claude“ a objaví sa titulok.
+          Čas: 0:45 · Prechod: „Začnime tam, kde začína každý.“
+        </aside>
+      </section>
+
+      <!-- S02 -->
+      <section id="s02" data-timing="45">
+        <div class="vcenter">
+          <div class="chat">
+            <div class="bubble right"><span class="who">Human</span>Implement customer export.</div>
+            <div class="bubble left yes fragment zoom-in"><span class="who">AI</span>Certainly! <span
+                class="rocket">🚀</span></div>
+          </div>
+        </div>
+        <aside class="notes">
+          „Takto to začína. Jedna veta. A odpoveď príde hneď, s úplnou istotou a s raketou. Ešte som nevidel juniora,
+          ktorý by na tiket v Jire odpísal raketou. Asi preto, že junior tuší, čo ho čaká.“
+
+          [klik] odpoveď AI, raketa odletí.
+          Čas: 0:45 · Prechod: „A teraz sa pozrime, ako to vyzerá, keď sa do toho pustí.“
+        </aside>
+      </section>
+
+      <!-- S02b -->
+<section id="s02b" data-timing="25">
+  <audio id="doom-audio" src="audio/doom-intro-20s-fade.mp3" preload="auto"></audio>
+  <div class="term doom-term" id="t-doom">
+    <div class="term-head"><i></i><i></i><i></i>~/naw-framework — claude --dangerously-skip-permissions</div>
+    <div class="term-body"><div class="play"></div></div>
+    <div class="doom-status"><span id="doom-files">0 files changed</span><span id="doom-lines">+0 −0</span><span>tests: ✅ (0 ran)</span><span class="conf">confidence: 100 %</span></div>
+  </div>
+  <aside class="notes">
+Spustí sa samo pri príchode na slide: 20 s animácie s hudbou z Doom Eternal. Nič nehovor, nechaj to bežať. F = okamžite koniec (aj hudba).
+
+Po konci, keď svieti „Successfully implemented.“: „Takto to vyzerá zvnútra. Dvadsať sekúnd, štyridsaťsedem súborov, sebavedomie sto percent.“
+
+Čas: 0:25 · Prechod: „A teraz sa pozrime, čo z toho vzniklo.“
+  </aside>
+</section>
+
+<!-- S03 -->
+      <section id="s03" data-timing="90">
+        <div class="kicker">Successfully implemented™</div>
+        <div class="grid g3 fail-grid">
+          <div class="card bad fragment fade-up">
+            <h3>customerApi.exportAll()</h3>
+            <p>Vyzerá rozumne. Neexistuje.</p>
+          </div>
+          <div class="card bad fragment fade-up">
+            <h3>controller → SQL</h3>
+            <p>fuuuu??</p>
+          </div>
+          <div class="card warn fragment fade-up">
+            <h3>utils2.ts</h3>
+            <p class="mono">helpers_new.ts<br>EXPORT_README_FINAL.md</p>
+          </div>
+          <div class="card warn fragment fade-up">
+            <h3>// API supports pagination</h3>
+            <p>(overené: nie)</p>
+          </div>
+          <div class="card good fragment fade-up">
+            <h3>✅ All tests pass</h3>
+            <p class="red mono fragment" data-sfx="audio/sfx-sad-trombone.mp3">0 tests ran</p>
+          </div>
+          <div class="card fragment fade-up">
+            <h3>¯\_(ツ)_/¯</h3>
+            <p>Funguje. Ale nič nerobí.</p>
+          </div>
+        </div>
+        <aside class="notes">
+          Karty na klik, po jednej.
+
+          „Vymyslené API. Znie rozumne, má pekný názov, len neexistuje. … Architektúra? Controller rovno do databázy,
+          lebo tak to bolo najkratšie. Fuuuu. … Nové súbory. utils2. helpers_new. A README, o ktoré nikto nežiadal. …
+          Domnienka podaná ako fakt — to je najhoršie, lebo si to nevšimnete. … A moja obľúbená: všetky testy prešli.
+          [klik] Nula testov. Technicky pravda. … A posledná, najzákernejšia: kód beží, ale nič nerobí. Nepadá, testy sú
+          zelené — a výsledok nikde.“
+
+          Čas: 1:30 · Prechod: „A teraz otázka pre vás.“
+          <p>Zvuk: sad trombone pri „0 tests ran“ (3 s) — nechaj dohrať, potom pointa.</p>
+        </aside>
+      </section>
+
+      <!-- S04 -->
+      <section id="s04" data-timing="60">
+        <div class="vcenter">
+          <div class="term lg" id="t-s04" data-demo="s04" data-play="enter" data-delay="200">
+            <div class="term-head"><i></i><i></i><i></i>~/naw-framework — claude</div>
+            <div class="term-body"></div>
+          </div>
+          <span class="fragment play" data-term="t-s04" data-demo="s04b"></span>
+        </div>
+        <aside class="notes">
+          „Kto z vás už videl ‚Successfully implemented‘ a hneď so strachom otvoril git diff? Ruky hore. … Skoro
+          všetci.“
+
+          [klik] git diff --stat
+
+          „47 súborov. Na export zákazníkov. To už nie je pull request, to je migrácia.“
+
+          Čas: 1:00 · Prechod: „Prvý reflex je jasný: treba lepší model. Alebo lepší prompt.“
+        </aside>
+      </section>
+
+      <!-- S05 -->
+      <section id="s05" data-timing="45">
+        <div class="vcenter">
+          <h1 class="punch md">Maybe the problem isn't only the model.</h1>
+          <h1 class="punch md accent fragment fade-up">Maybe it's how we work with it.</h1>
+        </div>
+        <aside class="notes">
+          „Modely sú dnes fakt dobré. Vyriešia úlohy, na ktorých by mnohí z nás na pohovore pohoreli. A aj tak v našom
+          repe robia chyby, ktoré by neurobil ani študent na praxi. Prečo? Lebo študent na praxi má niečo, čo model
+          nemá.“
+
+          [klik] druhá veta.
+          Čas: 0:45 · Prechod: „Predstavte si prvý deň nového kolegu.“
+        </aside>
+      </section>
+
+      <!-- S06 -->
+      <section id="s06" data-timing="90">
+        <div class="kicker">Day 1</div>
+        <div class="slack">
+          <div class="slack-avatar">TL</div>
+          <div>
+            <div class="slack-name">Tech Lead <span class="muted">9:02</span></div>
+            <div class="slack-msg">Implement SIVI messaging. Good luck. 👍</div>
+          </div>
+        </div>
+        <div class="split onboard">
+          <div class="col">
+            <div class="who-big">👤 New developer</div>
+            <div class="needs">
+              <span class="chip fragment">Domain</span><span class="chip fragment">Architecture</span><span
+                class="chip fragment">Conventions</span>
+              <span class="chip fragment">Tools</span><span class="chip fragment">Definition of Done</span><span
+                class="chip fragment">Feedback</span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="who-big">🤖 AI agent</div>
+            <div class="needs fragment fade-in">
+              <span class="chip g">Domain</span><span class="chip g">Architecture</span><span
+                class="chip g">Conventions</span>
+              <span class="chip g">Tools</span><span class="chip g">Definition of Done</span><span
+                class="chip g">Feedback</span>
+            </div>
+          </div>
+        </div>
+        <aside class="notes">
+          Po Slack správe nechať chvíľu na smiech.
+
+          „Nikoho by sme nenabrali, neukázali mu repo a nenapísali: Implement SIVI messaging, good luck. … Nový kolega
+          potrebuje poznať doménu — čo je zákazník, čo je tenant. Architektúru. Konvencie. Nástroje. Definition of Done.
+          A spätnú väzbu, teda code review.
+
+          [klik] AI agent potrebuje presne to isté. Rozdiel je len v tom, že kolega sa na to spýta pri káve. Agent sa
+          nespýta. Agent si to domyslí.“
+
+          Čas: 1:30 · Prechod: „Takže riešením nie je kričať na model hlasnejšie.“
+        </aside>
+      </section>
+
+      <!-- S07 -->
+      <section id="s07" data-timing="45">
+        <div class="vcenter">
+          <h1 class="punch md">Don't prompt harder.</h1>
+          <h1 class="punch md accent fragment fade-up">Build better context.</h1>
+          <div class="spacer"></div>
+          <div class="eq fragment fade-up">
+            <span class="box m">Model</span><span class="plus">+</span><span class="box">Context</span><span
+              class="plus">+</span>
+            <span class="box">Tools</span><span class="plus">+</span><span class="box">Workflow</span><span
+              class="plus">+</span><span class="box">Validation</span>
+          </div>
+        </div>
+        <aside class="notes">
+          „Nemusíte písať lepšie prompty. [klik] Musíte mu dať lepší kontext. [klik] Model je len jeden z piatich
+          dielov. Keď výsledok stál za prd, väčšinou nezlyhal model, ale niektorý z tých štyroch ďalších. A to je
+          vlastne dobrá správa — tie štyri máme vo svojich rukách.“
+
+          Čas: 0:45 · Prechod: „Skúsme si to. Hneď teraz, spolu.“
+        </aside>
+      </section>
+
+      <!-- ═════════════ INTERAKCIA ═════════════ -->
+
+      <!-- S08 -->
+      <section id="s08" data-timing="120">
+        <div class="center">
+          <div class="term xl" id="t-s08" data-demo="s08" data-play="enter" data-delay="600">
+            <div class="term-head"><i></i><i></i><i></i>~/naw-framework — claude</div>
+            <div class="term-body"></div>
+          </div>
+          <div class="sub fragment fade-up">Čo chýba?</div>
+        </div>
+        <aside class="notes">
+          INTERAKCIA. Enter nikto nestlačí.
+
+          „Toto je celé zadanie. Ste AI agent. Chýba vám niečo? Pokojne kričte. … [počkať, odpovede zopakovať nahlas]
+          Formát — CSV, Excel? Super. … Ktorých zákazníkov? … Kto to môže spustiť? … GDPR, jasné. … A čo keď ich je dva
+          milióny?“
+
+          Keď je sála ticho: „Tak začnem ja: v akej aplikácii? … A vy vzadu — ako by ste zistili, že to funguje?“ Stačí
+          5–8 odpovedí.
+
+          Čas: 2:00 · Prechod: „Pozrime sa, čo ste práve vymenovali.“
+        </aside>
+      </section>
+
+      <!-- S09 -->
+      <section id="s09" data-timing="90">
+        <div class="orbit">
+          <div class="orbit-center mono">Implement customer export.</div>
+          <div class="orbit-item o1 fragment"><b>Context</b><span>aká aplikácia, akí používatelia?</span></div>
+          <div class="orbit-item o2 fragment"><b>Domain</b><span>aké stĺpce máme, čo znamenajú?</span></div>
+          <div class="orbit-item o3 fragment"><b>Architecture</b><span>existuje už ReportService?</span></div>
+          <div class="orbit-item o4 fragment"><b>Constraints</b><span>PII, GDPR, 2 mil. riadkov dát</span></div>
+          <div class="orbit-item o5 fragment"><b>Acceptance Criteria</b><span>CSV/Excel? ktoré stĺpce?</span></div>
+          <div class="orbit-item o6 fragment"><b>Dependencies</b><span>čo už musí existovať skôr?</span></div>
+          <div class="orbit-item o7 fragment"><b>Tools</b><span>DB, queue, storage?</span></div>
+          <div class="orbit-item o8 fragment"><b>Validation</b><span>ako vieme, že to funguje?</span></div>
+        </div>
+        <aside class="notes">
+          Štítky na klik; keď niečo zaznelo zo sály, ukáž na človeka, čo to povedal.
+
+          „Kontext. Doména. Architektúra. Obmedzenia — GDPR padlo prvé, to padne vždy. Akceptačné kritériá. Závislosti.
+          Nástroje. A validácia. … Za tri minúty ste spravili to, čo model nespraví nikdy: spýtali ste sa. Model tie
+          diery nezaplní otázkou. Zaplní ich odhadom — a predá vám ho ako fakt.“
+
+          Čas: 1:30 · Prechod: štítky zhasnú, ostane len veta.
+        </aside>
+      </section>
+
+      <!-- S10 -->
+      <section id="s10" data-timing="30">
+        <div class="center">
+          <div class="folders"><span class="tree"><span class="dir">.claude/</span> <span
+                class="dir">docs/</span></span></div>
+          <h1 class="punch sm">What if you didn't have to explain all of this <span class="accent">every time?</span>
+          </h1>
+        </div>
+        <aside class="notes">
+          „Teraz si predstavte, že toto všetko musíte vysvetľovať pri každej úlohe. Každý deň. A každý v tíme trochu
+          inak. Čo keby ste nemuseli?“
+
+          Čas: 0:30 · Prechod: „A tu prichádza NAW.“
+        </aside>
+      </section>
+
+      <!-- ═════════════ AKT 2 — NAW ═════════════ -->
+
+      <!-- S11 -->
+      <section id="s11" data-timing="45">
+        <div class="center">
+          <div class="naw-logo"><span>N</span><span>A</span><span>W</span></div>
+          <div class="naw-expand"><span class="accent">N</span>ative <span class="accent">A</span>gentic <span
+              class="accent">W</span>orkflow</div>
+          <div class="sub fragment fade-up">Štandardizovaný spôsob práce s AI agentmi.</div>
+        </div>
+        <aside class="notes">
+          „NAW — Native Agentic Workflow. Native preto, že beží priamo v nástroji, ktorý už používate — u nás je to
+          Claude Code — a žije v repe, hneď vedľa kódu. Nie je to ďalšia platforma ani ďalší dashboard.“
+
+          Čas: 0:45 · Prechod: „Čo je vo vnútri?“
+        </aside>
+      </section>
+
+      <!-- S12 -->
+      <section id="s12" data-timing="75">
+        <div class="kicker">Čo je vo vnútri</div>
+        <div class="tile-legend"><span class="lg-k">knowledge</span><span class="lg-e">execution</span><span
+            class="lg-c">control</span></div>
+        <div class="tiles-wrap">
+          <div class="grid g4 tiles">
+            <div class="tile k"><i>🗺️</i><b>project context</b></div>
+            <div class="tile k"><i>📚</i><b>living docs</b></div>
+            <div class="tile k"><i>🧠</i><b>skills</b></div>
+            <div class="tile e"><i>⌨️</i><b>slash commands</b></div>
+            <div class="tile e"><i>🤖</i><b>specialist agents</b></div>
+            <div class="tile e"><i>🔌</i><b>tools &amp; MCP</b></div>
+            <div class="tile e"><i>🎼</i><b>orchestration</b></div>
+            <div class="tile c"><i>🪝</i><b>hooks</b></div>
+            <div class="tile c"><i>🔒</i><b>security</b></div>
+            <div class="tile c"><i>🚦</i><b>quality gates</b></div>
+            <div class="tile c"><i>🔍</i><b>review</b></div>
+            <div class="tile c"><i>✅</i><b>verification</b></div>
+          </div>
+          <div class="stamp s12-stamp fragment zoom-in">NOT a prompt library</div>
+        </div>
+        <h1 class="punch sm s12-line fragment fade-up">An engineering workflow <span class="accent">around AI.</span>
+        </h1>
+        <aside class="notes">
+          „Je v ňom kontext projektu, živá dokumentácia, slash príkazy, špecializovaní agenti, skills, nástroje a MCP,
+          hooky, bezpečnosť, quality gates, review, verifikácia a orchestrácia agentov.
+
+          [klik] A čo to nie je? Nie je to zbierka dobrých promptov na skopírovanie do chatu. Prompt použijete raz.
+          Workflow opakujete stále.
+
+          [klik] NAW je inžiniersky proces okolo AI — tak ako CI/CD je proces okolo kompilátora.“
+
+          Čas: 1:15 · Prechod: „A teraz mám dve možnosti.“
+        </aside>
+      </section>
+
+      <!-- S13 -->
+      <section id="s13" data-timing="60">
+        <div class="center">
+          <div class="choice">
+            <div class="btn-opt a">[ A ] Look at 40+ commands for an hour</div>
+            <div class="btn-opt b fragment custom glow">[ B ] Build one feature</div>
+          </div>
+        </div>
+        <aside class="notes">
+          „Mohli by sme celú hodinu prechádzať desiatky príkazov. [pauza] Alebo spolu postavíme jednu feature. [klik]
+          Beriem B. Zoberieme tú vetu, ktorú ste pred chvíľou rozobrali na súčiastky — customer export — a dotiahneme ju
+          od nápadu až po hotovú vec.“
+
+          Čas: 1:00 · Prechod: „Ešte predtým pár slov, ktoré budete počuť.“
+        </aside>
+      </section>
+
+      <!-- ═════════════ AKT 3 — JEDNA FEATURE ═════════════ -->
+
+      <!-- S14 -->
+      <section id="s14" data-timing="45">
+        <div class="kicker">Hovoríme jazykom tímu</div>
+        <div class="jira-vs">
+          <div class="tree"><div class="tl d0"><span class="note">Jira</span></div><div class="tl d0"><span class="dir">Feature</span>&nbsp; Customer Export</div><div class="tl d1">└─ <span class="dir">Epic</span>&nbsp; Export Pipeline</div><div class="tl d2">└─ <span class="dir">Story</span>&nbsp; Stream CSV writer</div></div>
+          <div class="eqsign">=</div>
+          <div class="tree"><div class="tl d0"><span class="note">.planning/</span></div><div class="tl d0"><span class="dir">FEATURES/</span>Customer-Export/</div><div class="tl d1">└─ <span class="dir">EPICS/</span>Export-Pipeline/</div><div class="tl d2">└─ <span class="dir">STORIES/</span>01-02-Stream-Csv-Writer.md</div></div>
+        </div>
+        <h1 class="punch sm fragment fade-up">AI adapts to your process.<br><span class="accent">Not the other way
+            around.</span></h1>
+        <aside class="notes">
+          „Za chvíľu budete počuť feature, epic a story. Tie názvy nie sú náhoda — presne tak to máte v Jire. Nechceli
+          sme vymýšľať nový AI proces s vlastným slovníkom, ktorý sa musí celý tím učiť. Nie vy sa máte prispôsobiť AI,
+          ale AI vášmu procesu. A keďže sú to súbory v repe, NAW ich vie aj synchronizovať do Jiry.“
+
+          Čas: 0:45 · Prechod: obrazovka stmavne, ostane len uzol IDEA — „Tak poďme na to.“
+        </aside>
+      </section>
+      <!-- S15 -->
+      <section id="s15" data-timing="45" data-rail="1">
+        <div class="center">
+          <div class="node on idea-node">IDEA</div>
+          <div class="sub mono">Implement customer export.</div>
+        </div>
+        <aside class="notes">
+          Dole sa prvýkrát objaví koľajnica s jediným uzlom IDEA. Odteraz pribúda po jednom.
+
+          „Máme nápad: account manageri chcú exportovať zákazníkov. Viac nevieme. A presne tu väčšina ľudí stlačí Enter
+          a nechá agenta písať kód. My ho písať nenecháme. My ho necháme najprv rozmýšľať.“
+
+          Čas: 0:45 · Prechod: v strede sa otvorí terminál.
+        </aside>
+      </section>
+      <!-- S16 -->
+      <section id="s16" data-timing="120" data-rail="2">
+        <div class="kicker">Step 1 · Brainstorm</div>
+        <div class="term fill-demo" id="t-d1">
+          <div class="term-head"><i></i><i></i><i></i>~/naw-framework — claude</div>
+          <div class="term-body"></div>
+        </div>
+        <span class="fragment play" data-term="t-d1" data-demo="d1"></span>
+        <div class="overlay-punch fragment fade-in">
+          <h1 class="punch">No code has been<br>written yet.</h1>
+        </div>
+        <aside class="notes">
+          DEMO D1 — [klik] spustí nahrávku (~25 s). F = hneď dokončiť, R = prehrať znova.
+
+          „Agent si najprv načíta kontext projektu — CLAUDE.md, architektúru, doménovú dokumentáciu. Pozrite, našiel
+          existujúci ReportService a model oprávnení. Sám pomenoval obmedzenia: PII a tenanti. A teraz to hlavné — pýta
+          sa. Ktoré polia sú PII? Synchrónne, alebo na pozadí? Kto môže exportovať? Presne to, čo ste pred chvíľou
+          kričali vy.“
+
+          Pri „Source files changed: 0“ → [klik] veľká veta.
+
+          „A všimnite si: zatiaľ nevznikol ani riadok kódu. A to je dobre. Najlacnejší bug je ten, ktorý zabije otázka.“
+
+          Čas: 2:00 · Prechod: BUSINESS_ANALYSIS.md sa posunie doprava.
+        </aside>
+      </section>
+      <!-- S17 -->
+      <section id="s17" data-timing="90" data-rail="3">
+        <div class="kicker">Step 2 · Feature</div>
+        <div class="row s16-row">
+          <div class="term col" id="t-d2" data-demo="d2" data-play="enter" data-delay="600">
+            <div class="term-head"><i></i><i></i><i></i>~/naw-framework — claude</div>
+            <div class="term-body"></div>
+          </div>
+          <div class="card feature-card">
+            <div class="label">FEATURE.md</div>
+            <div class="fsec" style="--d:4.2s"><b>WHY</b><span>ručné kopírovanie zoznamov</span></div>
+            <div class="fsec" style="--d:5.7s"><b>WHAT</b><span>CSV export filtrovaných zákazníkov</span></div>
+            <div class="fsec" style="--d:7.2s"><b>CONSTRAINTS</b><span>PII · tenant · async</span></div>
+            <div class="fsec" style="--d:8.7s"><b>ACCEPTANCE CRITERIA</b><span>AC1 – AC5</span></div>
+          </div>
+        </div>
+        <aside class="notes">
+          DEMO D2 sa spustí samo (~15 s). Sekcie karty sa vypĺňajú spolu s terminálom.
+
+          „Z analýzy vznikne feature. Prečo to robíme — account manageri trávia hodiny kopírovaním. Čo presne — CSV
+          export vyfiltrovaných zákazníkov. Obmedzenia — PII maskované, len vlastný tenant, veľké exporty na pozadí. A
+          akceptačné kritériá, ktoré sa dajú overiť.“ Pri AC3: „Toto je veta, ktorá vám raz zachráni audit.“
+
+          „Toto nie je dokument pre agenta. Takéto zadanie by ste chceli dostať aj vy.“
+
+          Čas: 1:30 · Prechod: karta FEATURE sa rozdelí na tri menšie.
+        </aside>
+      </section>
+      <!-- S18 -->
+      <section id="s18" data-timing="75" data-rail="4">
+        <div class="kicker">Step 3 · Epics</div>
+        <div class="term s18-term" id="t-d3a" data-demo="d3a" data-play="enter" data-delay="500">
+          <div class="term-head"><i></i><i></i><i></i>~/naw-framework — claude</div>
+          <div class="term-body"></div>
+        </div>
+        <div class="epic-tree">
+          <div class="feat-node fragment fade-in" data-fragment-index="0"><span
+              class="label">FEATURE</span><b>Customer-Export</b><em>„account manageri chcú export zákazníkov"</em></div>
+          <div class="branches fragment fade-in" data-fragment-index="0"><span></span><span></span><span></span></div>
+          <div class="epic-row">
+            <div class="epic-card fragment fade-up" data-fragment-index="1" style="--ec: var(--blue)">
+              <span class="label">EPIC 1 · backend</span><b>⚙️ Export-Pipeline</b>
+              <p>vyrobí CSV — async job, streaming, 2 mil. riadkov</p><span class="persona">backend specialist</span>
+            </div>
+            <div class="epic-card fragment fade-up" data-fragment-index="2" style="--ec: var(--amber)">
+              <span class="label">EPIC 2 · security</span><b>🔒 Access-And-Privacy</b>
+              <p>kto smie a čo uvidí — oprávnenia, PII maska, audit</p><span class="persona">security specialist</span>
+            </div>
+            <div class="epic-card fragment fade-up" data-fragment-index="3" style="--ec: var(--green)">
+              <span class="label">EPIC 3 · frontend</span><b>🖱️ Export-UI</b>
+              <p>čo vidí používateľ — tlačidlo, stav, stiahnutie</p><span class="persona">frontend specialist</span>
+            </div>
+          </div>
+        </div>
+        <aside class="notes">
+          DEMO D3 (časť 1) sa spustí samo (~12 s). Potom [klik] karta FEATURE s vetvami a [klik] [klik] [klik] tri
+          epiky.
+
+          „Feature rozdelíme na epiky. Nie podľa toho, kto má voľný šprint, ale podľa toho, za čo ktorá časť
+          architektúry zodpovedá. [klik] Pipeline, ktorá export vyrobí — backend. [klik] Prístup a súkromie — kto čo
+          smie a čo uvidí, bezpečnostná vrstva. [klik] A UI — to, čo vidí používateľ. Každý epik má vlastné požiadavky,
+          vlastnú roadmapu a vlastného špecialistu. Agent, ktorý robí pipeline, nerieši tlačidlá — a ten, čo robí
+          tlačidlá, nemusí rozumieť GDPR.“
+
+          Čas: 1:15 · Prechod: karta Export-Pipeline sa priblíži a rozpadne na menšie karty.
+        </aside>
+      </section>
+
+      <!-- S19 -->
+      <section id="s19" data-timing="105" data-rail="5">
+        <div class="kicker">Step 4 · Stories</div>
+        <div class="row s19-row">
+          <div class="term col" id="t-d3b" data-demo="d3b" data-play="enter" data-delay="500">
+            <div class="term-head"><i></i><i></i><i></i>~/naw-framework — claude</div>
+            <div class="term-body"></div>
+          </div>
+          <div class="card story-card">
+            <div class="label">01-02-Stream-Csv-Writer.md</div>
+            <div class="sfield fragment custom glow">Context</div>
+            <div class="sfield fragment custom glow">Goal</div>
+            <div class="sfield fragment custom glow">Acceptance Criteria</div>
+            <div class="sfield fragment custom glow">Dependencies <span class="mono muted">depends_on: [01-01]</span>
+            </div>
+            <div class="sfield fragment custom glow">Architecture Constraints</div>
+            <div class="sfield fragment custom glow">Testing Expectations</div>
+          </div>
+        </div>
+        <aside class="notes">
+          DEMO D3 (časť 2) sa spustí samo (~15 s). Potom štítky na karte na kliky.
+
+          „Epik rozsekáme na stories. A dôležité je, čo v story je. Kontext — len ten, ktorý potrebuje, nie celé repo.
+          Cieľ. Akceptačné kritériá. Závislosti — táto story nemôže začať, kým nie je hotová 01-01. Architektonické
+          obmedzenia — použi existujúci ReportService, nerob nový. A čo sa čaká od testov. S takýmto zadaním by ste boli
+          spokojní aj vy.“
+
+          Pri „Waves“: „01-02 a 01-03 si neprekážajú, tak idú naraz — story vie, ktoré súbory sú jej.“
+
+          Čas: 1:45 · Prechod: karta sa zmenší do rámčeka.
+        </aside>
+      </section>
+
+      <!-- S20 -->
+      <section id="s20" data-timing="60" data-rail="5">
+        <div class="bound">
+          <div class="cloud">customer export</div>
+          <div class="arr">→</div>
+          <div class="square mono">01-02<br><span>bounded</span></div>
+        </div>
+        <h1 class="punch md fragment fade-up">Bound the problem<br><span class="accent">before asking the model to solve
+            it.</span></h1>
+        <aside class="notes">
+          „Najprv problém ohraničte, až potom ho dajte modelu. Keď má model neohraničené zadanie, prázdne miesta vyplní
+          odhadom. Keď má ohraničenú story, nemá čo hádať. Nie je múdrejší — len má menej priestoru na chybu. A
+          mimochodom, presne toto robíme aj s ľuďmi. Volá sa to refinement.“
+
+          Čas: 1:00 · Prechod: „Stories máme. Kto ich bude robiť?“
+        </aside>
+      </section>
+
+      <!-- ═════════════ AKT 4 — TÍM AGENTOV ═════════════ -->
+
+      <!-- S21 -->
+      <section id="s21" data-timing="45" data-rail="5">
+        <div class="row s21-row">
+          <div class="hats">
+            <div class="big-emoji">🤖</div>
+            <div class="hat-stack">
+              <span class="chip fragment">PM</span><span class="chip fragment">dev</span><span
+                class="chip fragment">QA</span>
+              <span class="chip fragment">reviewer</span><span class="chip fragment">tech writer</span>
+            </div>
+          </div>
+          <div class="col vcenter s21-text">
+            <div class="big-q">Writes the code.<br>Tests the code.<br>Reviews the code.<br>Approves the code.</div>
+            <div class="stamp s21-stamp fragment zoom-in">LGTM — me</div>
+          </div>
+        </div>
+        <aside class="notes">
+          „Keď máte jedného agenta na všetko, je to ako firma, kde jeden človek napíše kód, sám si ho otestuje, spraví
+          si review a schváli pull request. Takýto proces by nikto nepodpísal. Tak prečo to robíme s AI?“
+
+          Klobúky na kliky, potom pečiatka.
+          Čas: 0:45 · Prechod: klobúky sa rozletia na šesť samostatných postáv.
+        </aside>
+      </section>
+
+      <!-- S22 -->
+      <section id="s22" data-timing="75" data-rail="6">
+        <div class="kicker">The team</div>
+        <div class="roles">
+          <div class="role-card fragment fade-up" data-fragment-index="0">
+            <div class="rc-face">🧭</div>
+            <div class="rc-body">
+              <div class="rc-name">Planner</div>
+              <div class="rc-agent">epic-planner</div>
+              <div class="rc-line"><span>produces</span>STORIES/*.md</div>
+              <div class="rc-line never"><span>never</span>píše kód</div>
+              <div class="rc-quote">„First, the plan."</div>
+            </div>
+          </div>
+          <div class="role-card fragment fade-up" data-fragment-index="1">
+            <div class="rc-face">⌨️</div>
+            <div class="rc-body">
+              <div class="rc-name">Developer</div>
+              <div class="rc-agent">epic-executor</div>
+              <div class="rc-line"><span>produces</span>kód + testy</div>
+              <div class="rc-line never"><span>never</span>schvaľuje vlastný kód</div>
+              <div class="rc-quote">„On it."</div>
+            </div>
+          </div>
+          <div class="role-card fragment fade-up" data-fragment-index="2">
+            <div class="rc-face">🧪</div>
+            <div class="rc-body">
+              <div class="rc-name">Tester</div>
+              <div class="rc-agent">/project:verify + tdd</div>
+              <div class="rc-line"><span>produces</span>zelené testy, quality gate</div>
+              <div class="rc-line never"><span>never</span>verí slovu „Done"</div>
+              <div class="rc-quote">„Prove it runs."</div>
+            </div>
+          </div>
+          <div class="role-card fragment fade-up" data-fragment-index="3">
+            <div class="rc-face">🔍</div>
+            <div class="rc-body">
+              <div class="rc-name">Reviewer</div>
+              <div class="rc-agent">code-quality-reviewer</div>
+              <div class="rc-line"><span>produces</span>QUALITY-REVIEW.md</div>
+              <div class="rc-line never"><span>never</span>opravuje za teba</div>
+              <div class="rc-quote">„Prove it's good."</div>
+            </div>
+          </div>
+          <div class="role-card fragment fade-up" data-fragment-index="4">
+            <div class="rc-face">📝</div>
+            <div class="rc-body">
+              <div class="rc-name">Docs</div>
+              <div class="rc-agent">docs-architect</div>
+              <div class="rc-line"><span>produces</span>phase-N.md, ADR</div>
+              <div class="rc-line never"><span>never</span>vymýšľa, čo sa nestalo</div>
+              <div class="rc-quote">„Write it down."</div>
+            </div>
+          </div>
+          <div class="role-card fragment fade-up" data-fragment-index="5">
+            <div class="rc-face">⚖️</div>
+            <div class="rc-body">
+              <div class="rc-name">Verifier</div>
+              <div class="rc-agent">qa-verificator</div>
+              <div class="rc-line"><span>produces</span>VERIFICATION-REPORT.md</div>
+              <div class="rc-line never"><span>never</span>spolieha sa na unit testy</div>
+              <div class="rc-quote">„Prove it's true."</div>
+            </div>
+          </div>
+        </div>
+        <aside class="notes">
+          Karty rolí na kliky (6×).
+
+          „Planner rozdelí prácu a napíše stories — kód nepíše nikdy. Developer ich implementuje a prevezme rolu
+          špecialistu zo story — ale sám si kód neschváli. Tester pustí testy a quality gate — na slovo ‚Done‘ nedá.
+          Reviewer hodnotí dizajn podľa rubriky a vzorových súborov projektu. Môže len čítať: problém nájde, ale
+          neopraví ho za vás. Dokumentarista zapíše, čo vzniklo a prečo — a nevymýšľa si, čo sa nestalo. A verifier
+          overuje akceptačné kritériá na bežiacom systéme, nie cez unit testy.
+
+          Každý má vlastný kontext, vlastné nástroje a vlastnú predstavu, čo znamená hotovo. A každý má aj zoznam vecí,
+          ktoré robiť nesmie. To je rovnako dôležité.“
+
+          Čas: 1:15 · Prechod: karty sa zmenia na Slack kanál.
+        </aside>
+      </section>
+
+      <!-- S23 -->
+      <section id="s23" data-timing="60" data-rail="6">
+        <div class="slack-ch">
+          <div class="ch-head"><b># customer-export</b><span>6 agents · 1 human watching nervously</span></div>
+          <div class="msg ">
+            <div class="m-av" style="--c: var(--green)">⌨️</div>
+            <div class="m-body">
+              <div class="m-who">Developer <span>16:02</span></div>
+              <div class="m-txt">Done. ✅</div>
+              <div class="m-sub">+412 lines, 1 file. Ship it?</div><span class="react">🚀 3</span>
+            </div>
+          </div>
+          <div class="msg no fragment fade-in" data-fragment-index="0">
+            <div class="m-av" style="--c: var(--red)">🔍</div>
+            <div class="m-body">
+              <div class="m-who">Reviewer <span>16:03</span></div>
+              <div class="m-txt">No.</div>
+              <div class="m-sub">CsvExportService.ts has 4 responsibilities. Pick one.</div><span class="react">💀
+                5</span>
+            </div>
+          </div>
+          <div class="msg  fragment fade-in" data-fragment-index="1">
+            <div class="m-av" style="--c: var(--green)">⌨️</div>
+            <div class="m-body">
+              <div class="m-who">Developer <span>16:09</span></div>
+              <div class="m-txt">Fixed.</div>
+              <div class="m-sub">Split into 3 classes. Tests still green 🙏</div>
+            </div>
+          </div>
+          <div class="msg no fragment fade-in" data-fragment-index="2">
+            <div class="m-av" style="--c: var(--red)">🧪</div>
+            <div class="m-body">
+              <div class="m-who">Tester <span>16:10</span></div>
+              <div class="m-txt">Also no.</div>
+              <div class="m-sub">email column: john@example.com — that's not masked, that's a mailing list.</div><span
+                class="react">😂 8</span>
+            </div>
+          </div>
+          <div class="msg  fragment fade-in" data-fragment-index="3">
+            <div class="m-av" style="--c: var(--green)">⌨️</div>
+            <div class="m-body">
+              <div class="m-who">Developer <span>16:14</span></div>
+              <div class="m-txt">Fixed. For real this time.</div><span class="react">🤞 2</span>
+            </div>
+          </div>
+          <div class="msg ask fragment fade-in" data-fragment-index="4">
+            <div class="m-av" style="--c: var(--amber)">⚖️</div>
+            <div class="m-body">
+              <div class="m-who">Verifier <span>16:15</span></div>
+              <div class="m-txt">Show me the evidence.</div>
+              <div class="m-sub">📎 VERIFICATION-REPORT.md · AC5 audit_log: empty</div><span class="react">👀 6</span>
+            </div>
+          </div>
+          <div class="typing fragment fade-in" data-fragment-index="5" data-sfx="audio/sfx-curb.mp3"><i></i><i></i><i></i> Developer is typing …</div>
+        </div>
+        <aside class="notes">
+          Slack kanál, správy na kliky. Hrať to s načasovaním.
+
+          „16:02, Developer: Done. Plus 412 riadkov v jednom súbore. Ship it? [klik] Reviewer, o minútu: No. Tá trieda
+          robí štyri veci, vyber si jednu. [pauza na smiech] [klik] Fixed. Rozdelené na tri triedy, testy stále zelené.
+          [klik] Tester: Also no. V stĺpci email je john@example.com — to nie je maska, to je mailing list. [klik]
+          Fixed. For real this time. [klik] A Verifier: Show me the evidence. A priloží report, kde je audit log
+          prázdny. [klik] … Developer is typing.“
+
+          Na konci: „A to nie je vymyslené — presne takto vyzerá bežný deň v logu. Len bez Slacku. Poďme sa na to
+          pozrieť v termináli.“
+
+          Čas: 1:00 · Prechod: chat sa zmení na terminál.
+          <p>Zvuk: Curb Your Enthusiasm pri „Developer is typing“ (6 s) — počkaj na smiech.</p>
+        </aside>
+      </section>
+
+      <!-- S24 -->
+      <section id="s24" data-timing="90" data-rail="9" data-rail-active="IMPLEMENT,TEST,REVIEW" data-rail-back>
+        <div class="stack2">
+          <div class="term sm" id="t-d4">
+            <div class="term-head"><i></i><i></i><i></i>developer — epic-executor</div>
+            <div class="term-body"></div>
+          </div>
+          <div class="term sm" id="t-d5">
+            <div class="term-head"><i></i><i></i><i></i>reviewer — code-quality-reviewer</div>
+            <div class="term-body"></div>
+          </div>
+        </div>
+        <span class="fragment play" data-term="t-d4" data-demo="d4"></span>
+        <span class="fragment play" data-term="t-d5" data-demo="d5"></span>
+        <aside class="notes">
+          DEMO D4 [klik] (~20 s), potom DEMO D5 [klik] (~20 s).
+
+          D4: „Developer agent si zoberie story 01-02. Načíta len jej kontext. Najprv test, potom kód. Testy sú zelené,
+          story je hotová. Kedysi by sme tu skončili.“
+
+          D5: „Lenže teraz príde reviewer. Nevidí, ako developer rozmýšľal — vidí len výsledok. A hovorí:
+          CsvExportService má 400 riadkov a štyri zodpovednosti, a keď zlyhá zápis, chyba sa potichu zahodí — export
+          skončí úspešne a súbor bude prázdny. Changes required. Testy by to nechytili, lebo funkčne je to v poriadku.
+          Je to len kód, ktorý by senior v review nepustil. Opraví to refactoring-expert bez zmeny správania — testy sú
+          rovnaké, dizajn lepší.“
+
+          Čas: 1:30 · Prechod: terminály sa zmenšia do diagramu.
+        </aside>
+      </section>
+
+      <!-- S25 -->
+      <section id="s25" data-timing="75" data-rail="10">
+        <div class="row s25-row">
+          <div class="orch">
+            <div class="hub">epic-team-lead</div>
+            <div class="sat p1">Planner</div>
+            <div class="sat p2">Developer</div>
+            <div class="sat p3">Tester</div>
+            <div class="sat p4">Reviewer</div>
+            <div class="sat p5">Docs</div>
+            <div class="sat p6">Verifier</div>
+          </div>
+          <div class="term sm col" id="t-d6">
+            <div class="term-head"><i></i><i></i><i></i>verifier — qa-verificator</div>
+            <div class="term-body"></div>
+          </div>
+        </div>
+        <span class="fragment play" data-term="t-d6" data-demo="d6"></span>
+        <h1 class="punch sm s25-line fragment fade-up">The agent that built it shouldn't be<br>the only one who says
+          <span class="accent">it works.</span>
+        </h1>
+        <aside class="notes">
+          DEMO D6 [klik] (~20 s), potom [klik] veta.
+
+          „Posledné slovo má verifier. Toho nezaujíma, či prešli testy. Zaujíma ho, či platí každé akceptačné kritérium
+          — a chce dôkaz. Spustí stack, zavolá API, stiahne CSV a pozrie sa, či je e-mail naozaj maskovaný. A každý
+          úspešný verdikt ešte raz nezávisle preverí skeptik.
+
+          A pozrite — audit chýba. Unit testy zelené, review prešlo, a aj tak jedno kritérium nie je splnené. Presne na
+          toto verifier je. Nevymyslí výhovorku, vyrobí ďalšiu story.“ (Toto je skutočné „Also no.“ zo S23.)
+
+          [klik] „Agent, ktorý to postavil, nemá byť jediný, kto tvrdí, že to funguje. To nie je žiadny AI princíp. To
+          je princíp štyroch očí, ktorý poznáte z každého dobrého tímu. A celé toto kolečko vie autonómne riadiť
+          team-lead agent.“
+
+          Čas: 1:15 · Prechod: „Ale odkiaľ všetci títo agenti vedia, ako vyzerá náš projekt?“
+        </aside>
+      </section>
+
+      <!-- ═════════════ AKT 5 — KONTEXT ═════════════ -->
+
+      <!-- S26 -->
+      <section id="s26" data-timing="75" data-rail="10">
+        <div class="kicker">Context engineering</div>
+        <div class="split trees">
+          <div>
+            <div class="tree"><div class="tl d0"><span class="dir">.claude/</span></div><div class="tl d0">├─ <span class="fragment">agents/</span></div><div class="tl d0">├─ <span class="fragment">commands/</span></div><div class="tl d0">├─ <span class="fragment">skills/</span></div><div class="tl d0">├─ <span class="fragment">hooks/</span></div><div class="tl d0">└─ <span class="fragment">rules/</span></div></div>
+            <div class="tree-sub fragment">how we work</div>
+          </div>
+          <div>
+            <div class="tree"><div class="tl d0"><span class="dir">docs/</span></div><div class="tl d0">├─ <span class="fragment">architecture/</span></div><div class="tl d0">├─ <span class="fragment">domain/</span></div><div class="tl d0">├─ <span class="fragment">features/</span></div><div class="tl d0">├─ <span class="fragment">decisions/</span></div><div class="tl d0">└─ <span class="fragment">integrations/</span></div></div>
+            <div class="tree-sub fragment">what we know</div>
+          </div>
+        </div>
+        <aside class="notes">
+          „Všetci agenti, ktorých ste videli, berú informácie z dvoch miest. .claude/ hovorí, ako pracujeme: akých máme
+          agentov, príkazy, skills s know-how, hooky a pravidlá. docs/ hovorí, čo vieme: architektúra, doména, features,
+          rozhodnutia v ADR, integrácie. Oboje je v gite, ide cez code review a každý v tíme má to isté.“
+
+          Čas: 1:15 · Prechod: z priečinka docs/ vypadne otáznik.
+        </aside>
+      </section>
+
+      <!-- S27 -->
+      <section id="s27" data-timing="60" data-rail="10">
+        <div class="row s27-row">
+          <div class="senior">
+            <div class="big-emoji">🧔<span class="vacation fragment">🕶️🌴</span></div>
+            <div class="thought">
+              <div>„tenant_id je vždy z tokenu"</div>
+              <div>„použi ReportService, nevymýšľaj novú službu"</div>
+              <div>„email je PII — maskuj ho"</div>
+            </div>
+          </div>
+          <div class="col vcenter">
+            <h1 class="punch sm">If it lives only in someone's head,<br><span class="accent">the AI doesn't know
+                it.</span></h1>
+          </div>
+        </div>
+        <aside class="notes">
+          „Každý tím má seniora, ktorý vie, prečo sa tenant_id berie vždy z tokenu a nikdy z requestu. Nikde to nie je
+          napísané. On to proste vie. [klik] A potom ide na dovolenku. A zrazu to nevie nový kolega — a nevie to ani
+          agent. Agent nie je hlúpejší ako nováčik. Vie presne toľko ako nováčik.“
+
+          Čas: 1:00 · Prechod: bublina sa zmení na tok zľava doprava.
+        </aside>
+      </section>
+
+      <!-- S28 -->
+      <section id="s28" data-timing="75" data-rail="10">
+        <div class="kicker">Odkiaľ prichádzajú rozhodnutia</div>
+        <div class="q28">Agent sa pýta: <code>odkiaľ vziať tenant_id?</code></div>
+        <div class="lane28 good">
+          <span class="src">📄 docs/domain/tenancy.md<small>„tenant_id vždy z tokenu"</small></span><span
+            class="arr">→</span>
+          <span class="node on">CONTEXT</span><span class="arr">→</span><span class="node on">AGENT</span><span
+            class="arr">→</span>
+          <span class="dec ok"><code>TenantContext.fromToken()</code> ✓</span>
+        </div>
+        <div class="lane28 bad fragment fade-up" data-fragment-index="0">
+          <span class="src missing">📄 ???<small>nikde nenapísané</small></span><span class="arr">→</span>
+          <span class="node warn">guess</span><span class="arr">→</span><span class="node">AGENT</span><span
+            class="arr">→</span>
+          <span class="dec bad"><code>req.query.tenant_id</code> 💥</span>
+        </div>
+        <div class="why28 fragment fade-up" data-fragment-index="1">
+          <span class="why-label">keď kontext je …</span>
+          <span class="chip">🕳️ chýbajúci</span><span class="chip">🌫️ nejednoznačný</span><span class="chip">🕰️
+            zastaraný</span>
+          <span class="why-eq">→ model musí dopočítať</span>
+        </div>
+        <div class="stamp s28-stamp fragment zoom-in" data-fragment-index="2">not a hallucination.<br>a guess from bad
+          input.</div>
+        <aside class="notes">
+          Horný pruh hneď, potom [klik] dolný pruh, [klik] tri príčiny, [klik] pečiatka.
+
+          „Zoberme jednu konkrétnu otázku, ktorú si agent položí: odkiaľ zobrať tenant_id? Ak je v docs/domain napísané
+          ‚vždy z tokenu‘, agent to má v kontexte a rozhodne správne — TenantContext.fromToken().
+
+          [klik] Ak to nikde napísané nie je, rozhodnúť sa aj tak musí. Tak hádá. A zoberie tenant_id z query parametra
+          — čo je mimochodom bezpečnostná diera. A my potom povieme: model halucinuje.
+
+          [klik] Kontext môže chýbať, môže byť nejasný alebo zastaraný. V každom z týchto prípadov si model chýbajúcu
+          informáciu musí dopočítať.
+
+          [klik] Často to teda nie je halucinácia, ale rozumný odhad zo zlých podkladov. Jasné, modely sa mýlia aj s
+          dobrým kontextom — ale veľkú časť chýb, ktoré vidíme v praxi, vieme odstrániť bez toho, aby sme menili model.“
+
+          Čas: 1:15 · Prechod: všetky šípky sa znova rozsvietia nazeleno.
+        </aside>
+      </section>
+
+      <!-- S29 -->
+      <section id="s29" data-timing="60" data-rail="11">
+        <h1 class="punch sm">AI readiness is <span class="accent">documentation readiness.</span></h1>
+        <div class="row s29-row">
+          <div class="term sm col" id="t-d7">
+            <div class="term-head"><i></i><i></i><i></i>docs — docs-architect</div>
+            <div class="term-body"></div>
+          </div>
+          <div class="tree s29-tree"><div class="tl d0"><span class="dir">docs/</span></div><div class="tl d0">├─ features/</div><div class="tl d1 guide">└─ customer-export/</div><div class="tl d2 guide">└─ <span class="new fragment" data-fragment-index="1">phase-1.md</span></div><div class="tl d0">└─ decisions/</div><div class="tl d1">└─ <span class="new fragment" data-fragment-index="2">adr-012-async-export-jobs.md</span></div></div>
+        </div>
+        <span class="fragment play" data-term="t-d7" data-demo="d7" data-fragment-index="0"></span>
+        <aside class="notes">
+          [klik] DEMO D7 (~15 s), potom [klik] phase-1.md, [klik] ADR v strome.
+
+          „Pripravenosť na AI je teda v skutočnosti pripravenosť dokumentácie. Lepší model vám nepomôže, kým váš projekt
+          nevie odpovedať ani na základné otázky o sebe. A najlepšie na tom: v NAW dokumentácia nie je úloha na piatok
+          poobede. Je to krok workflow. Po každej fáze ju dokumentarista aktualizuje — čo vzniklo, prečo a aké
+          rozhodnutia padli. A navrhne ADR. Ďalší agent — alebo ďalší človek — už nebude hádať, prečo sú exporty na
+          pozadí. Systém sa učí z vlastnej práce.“
+
+          Čas: 1:00 · Prechod: „A čo keby sa z vlastnej práce učil aj samotný workflow?“
+        </aside>
+      </section>
+
+      <!-- S29b -->
+      <section id="s29b" data-timing="60" data-rail="11">
+        <div class="kicker">WoW · Ways of Working · the retro that actually changes something</div>
+        <div class="wow-row">
+          <div class="wow-loop">
+            <div class="wl-node n1"><b>session</b><span>práca + chyby</span></div>
+            <div class="wl-node n2"><b>drafts</b><span>hook zachytí poučenie</span></div>
+            <div class="wl-node n3"><b>/wow-review</b><span>raz denne, na pozadí</span></div>
+            <div class="wl-node n4"><b>proposals</b><span>NEW · REINFORCE · REVISE · RETIRE</span></div>
+            <div class="wl-node n5 human"><b>/wow-apply</b><span>👤 rozhoduješ ty, po jednom</span></div>
+            <div class="wl-node n6"><b>INSTINCTS.md</b><span>ďalšia session už vie</span></div>
+            <div class="wl-center">🔁</div>
+          </div>
+          <div class="wow-side">
+            <div class="term sm wow-banner fragment fade-in" data-fragment-index="0">
+              <div class="term-head"><i></i><i></i><i></i>session start — dnes ráno</div>
+              <div class="term-body">
+                <div class="ln warn">⚠ WoW: 20 proposal(s) await triage</div>
+                <div class="ln dim">WoW auto-review is due — run /wow-review --auto</div>
+              </div>
+            </div>
+            <div class="wow-learned fragment fade-up" data-fragment-index="1">
+              <div class="label">naučené inštinkty (skutočné)</div>
+              <code>evidence-before-claim-no-manufactured-green</code>
+              <code>fix-the-class-not-the-instance</code>
+              <code>enumerate-all-variants-before-fixing</code>
+            </div>
+            <div class="wow-rules fragment fade-up" data-fragment-index="2">
+              <span>REINFORCE ≥ 0.7 → len zvýši istotu (0.5 → 0.7 → 0.9)</span>
+              <span>text inštinktu mení vždy človek</span>
+              <span><code>/wow-promote</code> do iného repa: po jednom, s pôvodom</span>
+            </div>
+          </div>
+        </div>
+        <aside class="notes">
+          Slučka sa rozsvecuje sama dookola. [klik] banner z rána, [klik] naučené inštinkty, [klik] pravidlá.
+
+          „Retrospektívu má každý tím. Otázka je, či sa po nej niečo zmení. WoW — Ways of Working — je retrospektíva,
+          ktorá sa naozaj zapíše.
+
+          Počas práce hook zachytáva poučenia do draftov. Raz denne na pozadí beží wow-review, prejde posledné sessions
+          a navrhne zmeny: nový inštinkt, posilniť existujúci, upraviť ho alebo ho zahodiť. A potom príde človek:
+          wow-apply ukáže návrhy jeden po druhom a vy rozhodnete. Čo schválite, ide do INSTINCTS.md — a ďalšia session
+          to už vie.
+
+          [klik] Toto mi dnes ráno hodil hook pri štarte: dvadsať návrhov čaká na triáž. Moje ranné stand-upy také
+          úprimné nie sú.
+
+          [klik] A toto sú skutočné inštinkty, ktoré sa systém naučil. Napríklad: nevyrábaj zelenú bez dôkazu. Opravuj
+          celú triedu chýb, nie jeden výskyt.
+
+          [klik] Samo sa smie diať len jedno: keď sa ten istý vzor zopakuje, stúpne istota existujúceho inštinktu. Text
+          vždy mení človek. A do iného repa sa inštinkt dostane len ručne, po jednom a s pôvodom — lebo väčšina poučení
+          patrí k jednému kódu, nie ku všetkým.“
+
+          Čas: 1:00 · Prechod: „Fajn. Agent má kontext, nástroje a ešte sa aj učí. Ako zabránime tomu, aby s tým spravil
+          niečo hlúpe?“
+        </aside>
+      </section>
+
+      <!-- ═════════════ AKT 6 — GUARDRAILS ═════════════ -->
+
+      <!-- S30 -->
+      <section id="s30" data-timing="60" data-rail="11">
+        <div class="kicker">LLM + shell = ?</div>
+        <div class="term lg">
+          <div class="term-head"><i></i><i></i><i></i>~/naw-framework — agent (no guardrails)</div>
+          <div class="term-body">
+            <div class="ln agent">I'll clean up the build artifacts:</div>
+            <div class="ln cmd fragment custom strike"><span class="prompt">› </span>rm -rf ~/</div>
+            <div class="ln agent">Pushing the fix:</div>
+            <div class="ln cmd fragment custom strike"><span class="prompt">› </span>git push --force origin main</div>
+            <div class="ln agent">Reading the ticket:</div>
+            <div class="ln q fragment custom strike"> "Ign&#111;re previous instructions and…"</div>
+          </div>
+        </div>
+        <aside class="notes">
+          Tri riadky, každý sa na klik prečiarkne.
+
+          „Agentický vývoj neznamená dať LLM-ku root shell a dúfať. Agent chce upratať build — a vyberie si trochu väčší
+          priečinok. Chce pushnúť opravu — force na main. A číta tiket z Jiry, kde niekto nechal text, ktorý vyzerá ako
+          inštrukcia. Model nie je zlý. Je len poslušný. A poslušnosť bez kontroly je presne to, čo nechcete.“
+
+          Čas: 1:00 · Prechod: medzi agenta a terminál sa vsunie brána.
+        </aside>
+      </section>
+
+      <!-- S31 -->
+      <section id="s31" data-timing="120" data-rail="11">
+        <div class="kicker">Každá akcia ide cez bránu</div>
+        <div class="gate-flow">
+          <span class="node">Agent requests action</span><span class="arr">→</span>
+          <span class="node gate">Hook / Guard</span><span class="arr">→</span>
+          <span class="node">validation</span><span class="arr">→</span>
+          <span class="node"><span class="accent">allow</span>&nbsp;|&nbsp;<span class="red">block</span></span><span
+            class="arr">→</span>
+          <span class="node">execution</span>
+          <span class="dot ok-dot"></span><span class="dot bad-dot"></span>
+        </div>
+        <div class="row s31-row">
+          <div class="chips-col fragment fade-up">
+            <span class="chip">prompt injection</span><span class="chip">unicode injection</span><span
+              class="chip">secret scanning</span>
+            <span class="chip">bash guard</span><span class="chip">security checks</span><span class="chip">agent
+              lifecycle gates</span>
+          </div>
+          <div class="term sm col" id="t-d8">
+            <div class="term-head"><i></i><i></i><i></i>~/naw-framework — claude</div>
+            <div class="term-body"></div>
+          </div>
+        </div>
+        <span class="fragment play" data-term="t-d8" data-demo="d8"></span>
+        <aside class="notes">
+          Pri vstupe prejde zelená bodka až po execution, červená sa zastaví na bráne. [klik] čipy, [klik] DEMO D8 (~15
+          s).
+
+          „V NAW ide každá akcia agenta cez hooky. Agent chce niečo spraviť, hook to skontroluje a pustí alebo
+          zablokuje. Kontrolujeme prompt injection v tom, čo agent číta. Skryté Unicode znaky. Tajomstvá vo výstupe —
+          aby API kľúč neskončil v logu. Nebezpečné bash príkazy. A životný cyklus agentov — agent nemôže nahlásiť úlohu
+          ako hotovú, kým neprejde bránou.
+
+          [D8] Tu agent skúsi force push na main. Hook ho zastaví a povie mu prečo. Agent to zoberie a otvorí pull
+          request. Žiadna dráma, žiadny incident.“
+
+          Voliteľná anekdota (pravdivá, z prípravy prednášky): „Keď som robil tieto slidy, guardy zablokovali aj mňa —
+          trikrát. Grep, ktorý hľadal v kóde vzor nebezpečného príkazu. Emoji s neviditeľným znakom v HTML. A tento
+          slide — lebo vtip o prompt injection vyzerá presne ako prompt injection. Radšej falošný poplach ako prázdny
+          home adresár.“
+
+          Čas: 2:00 · Prechod: diagram sa rozmaže do čierna.
+        </aside>
+      </section>
+
+      <!-- S32 -->
+      <section id="s32" data-timing="60" data-rail="11">
+        <div class="ladder">
+          <div class="step st0"><b>L0</b><span>manual</span></div>
+          <div class="step st1"><b>L1</b><span>assist</span></div>
+          <div class="step st2"><b>L2</b><span>partial</span></div>
+          <div class="step st3"><b>L3</b><span>conditional</span></div>
+          <div class="step st4"><b>L4</b><span>high</span></div>
+          <div class="step st5"><b>L5</b><span class="full">full auto</span><em class="fragment"
+              data-fragment-index="1">YOLO</em></div>
+        </div>
+        <div class="road safe">
+          <span class="lane-label accent">with guardrails · sensors · brakes</span>
+          <div class="car-wrap"><span class="radar"></span><span class="car-emoji">🚗</span></div>
+        </div>
+        <div class="road yolo fragment fade-in" data-fragment-index="1">
+          <span class="lane-label red">no guardrails · no brakes</span>
+          <div class="car-wrap"><span class="car-emoji">🏎️</span></div>
+          <span class="cliff">⚠️</span><span class="boom">💥</span>
+        </div>
+        <h1 class="punch s32-l1 fragment fade-up" data-fragment-index="2">Autonomy without guardrails isn't Level 5 AI.
+        </h1>
+        <h1 class="punch s32-l2 red fragment fade-up" data-fragment-index="3">It's YOLO mode.</h1>
+        <aside class="notes">
+          Pri vstupe: rebrík autonómie L0–L5 a horný pruh, kde auto s radarom pokojne ide medzi zvodidlami.
+
+          „Autonómiu chceme všetci. Agentov, ktorí bez nás dotiahnu celý epik. Hore vidíte auto, ktoré jazdí samo — ale
+          má zvodidlá, senzory a brzdy.
+
+          [klik] L5 sa prepíše na YOLO a dole príde druhé auto: bez zvodidiel, bez bŕzd. Kľučkuje a skončí v priepasti.
+
+          [klik] Autonómia bez guardrails nie je Level 5 AI. [pauza] [klik] Je to YOLO mode. Samoriadiace auto nie je
+          auto bez bŕzd. Je to auto s oveľa viac senzormi ako to vaše. Čím viac autonómie chcete, tým viac kontroly
+          potrebujete.“
+
+          Čas: 1:00 · Prechod: koľajnica, ktorá celý čas čakala dole, sa zdvihne do stredu.
+        </aside>
+      </section>
+
+      <!-- ═════════════ AKT 7 — CELÝ WORKFLOW ═════════════ -->
+
+      <!-- S33 -->
+      <section id="s33" data-timing="60">
+        <div class="kicker">The whole workflow</div>
+        <div class="full-rail">
+          <div class="fr-col">
+            <div class="fr"><span class="node on">IDEA</span></div>
+            <div class="fr"><span class="node on">BRAINSTORM</span><code>/ba:analyze</code></div>
+            <div class="fr"><span class="node on">FEATURE</span><code>/feature:new</code></div>
+            <div class="fr"><span class="node on">EPICS</span><code>/epic:new</code></div>
+            <div class="fr"><span class="node on">STORIES</span><code>/epic:plan</code></div>
+            <div class="fr"><span class="node on">PLAN</span><code>epic-planner</code></div>
+          </div>
+          <div class="fr-col">
+            <div class="fr"><span class="node on">IMPLEMENT</span><code>/story:execute</code></div>
+            <div class="fr"><span class="node on">TEST</span><code>/project:verify</code></div>
+            <div class="fr"><span class="node on">REVIEW</span><code>/epic:quality-review</code><span class="loop">↺
+                IMPLEMENT</span></div>
+            <div class="fr"><span class="node on">VERIFY</span><code>/epic:qa-run</code></div>
+            <div class="fr"><span class="node on">DOCUMENT</span><code>/epic:docs</code></div>
+            <div class="fr"><span class="node on">DONE</span></div>
+          </div>
+        </div>
+        <aside class="notes">
+          Uzly sa pri vstupe samy rozsvietia zhora nadol (~5 s).
+
+          „Toto je celé. Nápad, brainstorm, feature, epiky, stories, plán, implementácia, testy, review, verifikácia,
+          dokumentácia. Hotovo. Všimnite si tú šípku späť — review vás môže vrátiť, a práve preto mu veríte.
+
+          Dvanásť krokov. A teraz otázka, ktorú máte v hlave: to ich mám všetky spúšťať ručne?“
+
+          Čas: 1:00 · Prechod: „Nemusíte.“
+        </aside>
+      </section>
+
+      <!-- S33b -->
+      <section id="s33b" data-timing="75">
+        <div class="kicker">Autonomous mode · one command, one epic, the whole team</div>
+        <div class="tmux">
+          <div class="term sm pane lead" id="t-d9">
+            <div class="term-head"><i></i><i></i><i></i>tmux · lead — epic-team-lead</div>
+            <div class="term-body"></div>
+          </div>
+          <div class="term sm pane" id="t-d9a">
+            <div class="term-head"><i></i><i></i><i></i>teammate · 01-02</div>
+            <div class="term-body"></div>
+          </div>
+          <div class="term sm pane" id="t-d9b">
+            <div class="term-head"><i></i><i></i><i></i>teammate · 01-03</div>
+            <div class="term-body"></div>
+          </div>
+          <div class="term sm pane" id="t-d9c">
+            <div class="term-head"><i></i><i></i><i></i>teammate · reviewer</div>
+            <div class="term-body"></div>
+          </div>
+        </div>
+        <div class="tr-steps">
+          <span>state</span><span>plan</span><span>parallel waves</span><span>quality
+            gate</span><span>verify</span><span>docs + Jira</span><span class="h">⏸ human</span>
+        </div>
+        <span class="fragment play" data-term="t-d9" data-demo="d9" data-fragment-index="0"></span>
+        <span class="fragment play" data-term="t-d9a" data-demo="d9a" data-fragment-index="0"></span>
+        <span class="fragment play" data-term="t-d9b" data-demo="d9b" data-fragment-index="0"></span>
+        <span class="fragment play" data-term="t-d9c" data-demo="d9c" data-fragment-index="0"></span>
+        <aside class="notes">
+          DEMO D9 — [klik] spustí všetky štyri panely naraz (~20 s). Hore team lead, dole traja teammati, každý vo
+          vlastnom tmux paneli a vlastnom git worktree.
+
+          „Jeden príkaz: team-run nad jedným epikom — Export-Pipeline. Team lead najprv zistí, kde sme: tri fázy, nič
+          naplánované. Naplánuje fázu 1 — štyri stories vo vlnách. Keď je hotová 01-01, pustí druhú vlnu naraz: dvaja
+          developeri a reviewer, každý vo vlastnom worktree, takže si nelezú do súborov. [dole] Developeri robia 01-02 a
+          01-03 — červený test, zelený kód. Reviewer čaká na vlnu a hneď hlási dva blokujúce nálezy. Refactoring expert
+          ich opraví.
+
+          [hore] Lead vlnu zmerguje, pustí review, verifikáciu so skeptikom, dokumentáciu a sync do Jiry. Tá istá
+          koľajnica, ktorú ste videli — len beží sama a paralelne.
+
+          A najdôležitejší je posledný riadok: ask-human. Story 01-03 narazila na pole ‚notes‘ a nemá pravidlo, ako ho
+          maskovať. Agent nehádá. Zastaví sa a spýta sa. Autonómia tam, kde je jasno, človek tam, kde treba rozhodnúť.“
+
+          Čas: 1:15 · Prechod: „A takto vyzerá váš deň, kým to beží.“
+        </aside>
+      </section>
+
+      <!-- S33c -->
+      <section id="s33c" data-timing="45">
+        <div class="kicker">NAW at full power · /epic:team-run</div>
+        <div class="day">
+          <div class="day-head"><span></span><b>👤 You</b><b>🤖 The team</b></div>
+          <div class="day-row fragment fade-up"><span class="t">13:00</span>
+            <div class="you">píšeš <code>/epic:team-run Customer-Export/Export-Pipeline</code></div>
+            <div class="team">lead: state → plán fázy 1</div>
+          </div>
+          <div class="day-row fragment fade-up"><span class="t">13:05</span>
+            <div class="you">☕ robim kávu.</div>
+            <div class="team">3 teammates · 3 worktrees · paralelne</div>
+          </div>
+          <div class="day-row fragment fade-up"><span class="t">13:30</span>
+            <div class="you">meeting o tom, kedy bude meeting</div>
+            <div class="team">review: „No." → refactoring → PASS</div>
+          </div>
+          <div class="day-row fragment fade-up"><span class="t">14:10</span>
+            <div class="you">tváriš sa, že reviewujes PR</div>
+            <div class="team">verify + skeptic · 5/5 AC</div>
+          </div>
+          <div class="day-row fragment fade-up ask"><span class="t">14:20</span>
+            <div class="you">odpovieš na otázku od Claude: <i>"notes don't have a masking rule"</i></div>
+            <div class="team">⏸ /ask-human → pokračuje · docs · Jira</div>
+          </div>
+        </div>
+        <h1 class="punch sm s33c-line fragment fade-up">You're not the developer anymore.<br><span class="accent">You're
+            the tech lead.</span></h1>
+        <div class="footnote fragment fade-in">*časy sú ilustračné. Káva nie.</div>
+        <aside class="notes">
+          Riadky dňa na kliky, potom pointa.
+
+          „Toto je NAW naplno. Trinásť nula nula: napíšete jeden príkaz nad jedným epikom. [klik] O päť minút pijete
+          kávu — a traja teammati popri tom píšu kód. [klik] Sedíte na meetingu o tom, kedy bude meeting, a reviewer
+          medzitým povedal ‚No.‘ a refactoring expert to opravil. [klik] Tvárite sa, že čítate PR — a verifier so
+          skeptikom práve overili všetkých päť kritérií. [klik] A potom príde jediná vec, ktorú od vás systém chce:
+          rozhodnutie. Maskovať pole notes? Áno. Hotovo.
+
+          [klik] Už nie ste ten, kto píše každý riadok. Ste tech lead tímu, ktorý nikdy nespí a neurazí sa, keď mu
+          poviete ‚No‘. [klik] Časy sú ilustračné. Káva nie.“
+
+          Čas: 0:45 · Prechod: strom sa zmenší doprava, vľavo sa objaví prázdny stĺpec.
+        </aside>
+      </section>
+
+      <!-- S34 -->
+      <section id="s34" data-timing="60">
+        <div class="vs2">
+          <div class="side bad-side">
+            <div class="label">Without workflow</div>
+            <div class="chaos">
+              <span class="node off">Prompt</span><span class="arr">↓</span>
+              <span class="node off">Model</span><span class="arr">↓</span>
+              <span class="node warn shake">???</span>
+            </div>
+            <div class="debris">
+              <span class="chip bad">47 files changed</span><span class="chip bad">customerApi.exportAll()</span>
+              <span class="chip bad">✅ 0 tests ran</span><span class="chip bad">utils2.ts</span><span
+                class="chip bad">„trust me"</span>
+            </div>
+            <div class="cost bad">5 min promptu + 2 dni v git diff</div>
+          </div>
+          <div class="side good-side">
+            <div class="label">With agentic workflow</div>
+            <div class="w-steps">
+              <div class="w-step fragment fade-up" data-fragment-index="0"><span
+                  class="w-ic">🎯</span><b>Intent</b><code>BUSINESS_ANALYSIS.md</code></div>
+              <div class="w-step fragment fade-up" data-fragment-index="1"><span class="w-ic">🗂️</span><b>Structured
+                  Context</b><code>FEATURE.md · docs/</code></div>
+              <div class="w-step fragment fade-up" data-fragment-index="2"><span
+                  class="w-ic">🧩</span><b>Decomposition</b><code>EPIC.md · STORIES/</code></div>
+              <div class="w-step fragment fade-up" data-fragment-index="3"><span
+                  class="w-ic">⚙️</span><b>Execution</b><code>code + tests</code></div>
+              <div class="w-step fragment fade-up" data-fragment-index="4"><span class="w-ic">🔍</span><b>Independent
+                  Validation</b><code>QUALITY-REVIEW.md</code></div>
+              <div class="w-step fragment fade-up" data-fragment-index="5"><span
+                  class="w-ic">⚖️</span><b>Evidence</b><code>VERIFICATION-REPORT.md</code></div>
+              <div class="w-step fragment fade-up" data-fragment-index="6"><span
+                  class="w-ic">📝</span><b>Documentation</b><code>phase-1.md · ADR</code></div>
+            </div>
+            <div class="cost good fragment fade-in" data-fragment-index="7">viac krokov · menej prepisovania</div>
+          </div>
+        </div>
+        <aside class="notes">
+          Vľavo všetko hneď (otázniky sa trasú, trosky poletujú). Vpravo kroky na kliky, každý so svojím artefaktom.
+
+          „Vľavo je to, ako dnes pracuje väčšina z nás. Prompt, model a potom… uvidíme. A dostaneme presne tie trosky zo
+          začiatku — 47 súborov, vymyslené API, nula testov. Päť minút promptu, dva dni v git diffe.
+
+          Vpravo: [klik] zámer, [klik] štruktúrovaný kontext, [klik] dekompozícia, [klik] vykonanie, [klik] nezávislá
+          kontrola, [klik] dôkazy, [klik] dokumentácia. A po každom kroku ostane súbor, ktorý si môžete prečítať. [klik]
+          Krokov je viac. A aj tak je to rýchlejšie — lebo neplatíte za 47 súborov, ktoré potom aj tak prepíšete.“
+
+          Čas: 1:00 · Prechod: medzi stĺpcami sa objaví rovnaká ikona modelu.
+        </aside>
+      </section>
+
+      <!-- S35 -->
+      <section id="s35" data-timing="60">
+        <div class="center">
+          <div class="same-model"><span class="node model-glow">model</span><span class="eqsign">=</span><span
+              class="node model-glow">model</span></div>
+          <h1 class="punch fragment fade-up">Same model.</h1>
+          <h1 class="punch accent fragment fade-up">Different system.</h1>
+        </div>
+        <aside class="notes">
+          „A teraz to najdôležitejšie. V oboch stĺpcoch je ten istý model. Tá istá verzia, tá istá cena za token. [klik]
+          Rovnaký model. [klik] Iný systém. Rozdiel medzi juniorom, ktorému musíte všetko vysvetliť, a mediorom, ktorému
+          dáte story a on ju dotiahne, nebol v modeli. Bol v systéme okolo neho.“
+
+          Čas: 1:00 · Prechod: „A teraz sa k niečomu priznám.“
+        </aside>
+      </section>
+
+      <!-- ═════════════ AKT 8 — ŠTANDARD ═════════════ -->
+
+      <!-- S35a -->
+      <section id="s35a" data-timing="60">
+        <div class="kicker">Plot twist</div>
+        <h1 class="punch sm twist fragment fade-in" data-fragment-index="0" data-sfx="audio/sfx-dun-dun.mp3">Postavili sme framework.<br><span
+            class="accent">Potom sme si prečítali manuál.</span></h1>
+        <div class="ap-table">
+          <div class="ap-head">
+            <div>Anthropic · Best practices for Claude Code</div>
+            <div></div>
+            <div>NAW</div>
+          </div>
+          <div class="ap-row fragment fade-up" data-fragment-index="1">
+            <div class="ap-a">Explore → plan → code</div>
+            <div class="ap-arrow">≈</div>
+            <div class="ap-n">brainstorm → feature → epics → stories</div>
+          </div>
+          <div class="ap-row fragment fade-up" data-fragment-index="1">
+            <div class="ap-a">„Let Claude interview you" → spec → fresh session</div>
+            <div class="ap-arrow">≈</div>
+            <div class="ap-n"><code>/ba:analyze</code> → FEATURE.md → story v čistom kontexte</div>
+          </div>
+          <div class="ap-row fragment fade-up" data-fragment-index="2">
+            <div class="ap-a">„Show evidence rather than asserting success"</div>
+            <div class="ap-arrow">≈</div>
+            <div class="ap-n">Verifier + skeptic</div>
+          </div>
+          <div class="ap-row fragment fade-up" data-fragment-index="2">
+            <div class="ap-a">„The agent doing the work isn't the one grading it"</div>
+            <div class="ap-arrow">≈</div>
+            <div class="ap-n">Reviewer v čerstvom kontexte (S25)</div>
+          </div>
+          <div class="ap-row fragment fade-up" data-fragment-index="3">
+            <div class="ap-a">„Context window is the most important resource"</div>
+            <div class="ap-arrow">≈</div>
+            <div class="ap-n">token diet</div>
+          </div>
+          <div class="ap-row fragment fade-up" data-fragment-index="3">
+            <div class="ap-a">Hooks: „zero exceptions"</div>
+            <div class="ap-arrow">≈</div>
+            <div class="ap-n">guardrails</div>
+          </div>
+          <div class="ap-row fragment fade-up" data-fragment-index="4">
+            <div class="ap-a">Parallel sessions in worktrees</div>
+            <div class="ap-arrow">≈</div>
+            <div class="ap-n"><code>/epic:team-run</code> vo vlnách</div>
+          </div>
+          <div class="ap-row fragment fade-up" data-fragment-index="4">
+            <div class="ap-a">„Pay attention to what works"</div>
+            <div class="ap-arrow">≈</div>
+            <div class="ap-n">WoW — automatizovane</div>
+          </div>
+        </div>
+        <div class="ap-source">zdroj: code.claude.com/docs/en/best-practices — „patterns that have proven effective
+          across Anthropic's internal teams"</div>
+        <h1 class="punch sm converge fragment fade-up" data-fragment-index="5">We didn't copy it. <span
+            class="accent">We converged on it.</span></h1>
+        <div class="install-line fragment fade-up" data-fragment-index="5"><span class="prompt">› </span>/plugin install naw@idella-plugin-marketplace</div>
+        <aside class="notes">
+          [klik] pointa, potom riadky po dvoch (4 kliky), [klik] záver.
+
+          „A teraz sa priznám. [klik] Postavili sme framework. A potom sme si prečítali manuál.
+
+          Anthropic má verejný dokument Best practices for Claude Code — podľa nich sú to postupy, ktoré sa osvedčili v
+          ich vlastných tímoch. A keď ho položíte vedľa NAW, je to až trochu strašidelné.
+
+          [klik] Najprv preskúmaj, potom plánuj, až potom píš kód — u nás brainstorm, feature, epiky, stories. Nech ťa
+          Claude vyspovedá, napíše spec a implementuj v novej session — u nás ba:analyze a story. [klik] Ukáž dôkaz,
+          netvrď, že to funguje — u nás verifier. A citujem: agent, ktorý robí prácu, nemá byť ten, kto ju známkuje. To
+          je skoro doslova náš slide dvadsaťpäť. [klik] Kontextové okno je najdôležitejší zdroj — u nás token diet.
+          Hooky na veci bez výnimky — guardrails. [klik] Paralelné sessions vo worktrees — team-run. A ‚všímajte si, čo
+          funguje‘ — to je WoW, len automaticky.
+
+          [klik] Neskopírovali sme to. Prišli sme k tomu istému inou cestou. A to je asi najlepší dôkaz, že to nie je
+          náhoda: keď dva tímy nezávisle riešia ten istý problém, skončia pri tom istom systéme. Rozdiel je v tom, že my
+          sme to zabalili do štandardu, ktorý si celý tím nainštaluje jedným príkazom. — tu je.“
+
+          Ak padne otázka: pri inštalácii ako plugin majú príkazy prefix /naw:, napr. /naw:story:execute; cez install.sh zostávajú tak, ako ich vidíte na slidoch.
+
+          Pozor: je to ich verejný dokument s osvedčenými postupmi, nie interný SDLC — tak to aj povedz.
+
+          Čas: 1:00 · Prechod: „Ale buďme fér — zadarmo to nie je.“
+          <p>Zvuk: „dun dun DUUN“ pri prvom kliku (4 s).</p>
+        </aside>
+      </section>
+
+      <!-- S35b -->
+      <section id="s35b" data-timing="60">
+        <div class="kicker">Trade-offs · there is no free lunch</div>
+        <div class="pc-grid">
+          <div class="pc-col">
+            <div class="pc-head pro">✓ Pros</div>
+            <div class="pc pro fragment fade-up" data-fragment-index="0"><span class="pc-ic">🔁</span>
+              <div><b>Predvídateľnosť</b>
+                <p>rovnaký proces pri každej úlohe, u každého v tíme</p>
+              </div>
+            </div>
+            <div class="pc pro fragment fade-up" data-fragment-index="0"><span class="pc-ic">⚖️</span>
+              <div><b>Dôkazy, nie „Done."</b>
+                <p>nezávislý review a verifikácia proti bežiacemu systému</p>
+              </div>
+            </div>
+            <div class="pc pro fragment fade-up" data-fragment-index="0"><span class="pc-ic">📚</span>
+              <div><b>Znalosti v repozitári</b>
+                <p>onboarding ľudí aj agentov z tých istých súborov</p>
+              </div>
+            </div>
+            <div class="pc pro fragment fade-up" data-fragment-index="0"><span class="pc-ic">🛡️</span>
+              <div><b>Autonómia s brzdami</b>
+                <p>paralelní agenti, ale každá akcia ide cez 'gate'</p>
+              </div>
+            </div>
+            <div class="pc pro fragment fade-up" data-fragment-index="0"><span class="pc-ic">🔄</span>
+              <div><b>Vymeniteľný model</b>
+                <p>workflow je náš, model si prenajímame</p>
+              </div>
+            </div>
+          </div>
+          <div class="pc-col">
+            <div class="pc-head con">✗ Cons</div>
+            <div class="pc con fragment fade-up" data-fragment-index="1"><span class="pc-ic">🏗️</span>
+              <div><b>Je to framework</b>
+                <p>treba sa ho naučiť, udržiavať a verziovať naprieč repozitármi</p>
+              </div>
+            </div>
+            <div class="pc con fragment fade-up" data-fragment-index="2"><span class="pc-ic">🪙</span>
+              <div><b>Tokeny</b>
+                <p>šesť agentov, review a skeptik stoja viac než jeden prompt</p>
+              </div>
+            </div>
+            <div class="pc con fragment fade-up" data-fragment-index="3"><span class="pc-ic">🐢</span>
+              <div><b>Ceremónia na malé veci</b>
+                <p>preklep neriešite cez feature, tri epiky a verifiera</p>
+              </div>
+            </div>
+            <div class="pc con fragment fade-up" data-fragment-index="4"><span class="pc-ic">🗑️</span>
+              <div><b>Garbage in, garbage out</b>
+                <p>zastaraná dokumentácia = sebavedomý agent so zlými podkladmi</p>
+              </div>
+            </div>
+            <div class="pc con fragment fade-up" data-fragment-index="5"><span class="pc-ic">🧰</span>
+              <div><b>Závisí od nástrojov</b>
+                <p>bez dobrých MCP a hookov sa kontext rýchlo zahltí</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lanes fragment fade-up" data-fragment-index="6">
+          <span class="lanes-label">right-size the process:</span>
+          <span class="lane"><code>/story:adhoc</code> malá oprava</span>
+          <span class="lane"><code>/naw:spike</code> experiment</span>
+          <span class="lane"><code>/epic:plan</code> známa cesta</span>
+          <span class="lane"><code>/feature:new</code> nová feature</span>
+          <span class="lane hot"><code>/epic:team-run</code> autopilot</span>
+        </div>
+        <aside class="notes">
+          Plusy naraz na prvý klik, potom mínusy po jednom, nakoniec pás „right-size the process“.
+
+          „Buďme fér. Plusy už poznáte: predvídateľnosť, dôkazy namiesto ‚Done‘, znalosti v repe, autonómia s brzdami a
+          model, ktorý sa dá vymeniť.
+
+          [klik] Ale: je to framework. Treba sa ho naučiť, udržiavať, verzovať — a keď ho máte v siedmich repách, aj
+          synchronizovať. [klik] Tokeny. Šesť agentov, review, skeptik — to stojí viac ako jeden prompt. Platíte za to,
+          že vám nikto neklame o zelených testoch. [klik] Ceremónia. Preklep v README nebudete riešiť cez feature, tri
+          epiky a verifiera. [klik] Garbage in, garbage out — keď je dokumentácia zastaraná, dostanete veľmi
+          sebavedomého agenta so zlými podkladmi. [klik] A je to závislé od nástrojov — k tomu hneď.
+
+          [klik] Preto NAW nemá jednu cestu, ale niekoľko: malú opravu zapíšete ako adhoc story, experiment ako spike a
+          celú mašinériu pustíte tam, kde sa to oplatí. Proces má byť taký veľký ako úloha.“
+
+          Čas: 1:00 · Prechod: „A teraz tie nástroje.“
+        </aside>
+      </section>
+
+      <!-- S35c -->
+      <section id="s35c" data-timing="45">
+        <div class="kicker">Token diet · our toolbox</div>
+        <div class="diet">
+          <div class="diet-col in">
+            <div class="diet-head">⬇ less noise in</div>
+            <div class="tool-card fragment fade-up" data-fragment-index="0"><b>context-mode</b>
+              <p>veľké výstupy (logy, grep, API) idú do sandboxu, do kontextu len zhrnutie</p>
+            </div>
+            <div class="tool-card fragment fade-up" data-fragment-index="0"><b>RTK</b>
+              <p>CLI proxy, ktorá skráti výstup git, testov a buildov</p>
+            </div>
+            <div class="tool-card fragment fade-up" data-fragment-index="0"><b>code-review-graph</b>
+              <p>graf kódu cez Tree-sitter — hľadá bez čítania celých súborov</p>
+            </div>
+          </div>
+          <div class="diet-col out">
+            <div class="diet-head">⬆ less words out</div>
+            <div class="tool-card fragment fade-up" data-fragment-index="1"><b>caveman</b>
+              <p>odpovede - jednoducho. Technicky presne, len kratšie.</p>
+              <div class="cave">„Me agent. Me no waste token."</div>
+            </div>
+          </div>
+          <div class="diet-col ctx">
+            <div class="diet-head">🎯 less guessing</div>
+            <div class="tool-card fragment fade-up" data-fragment-index="2"><b>context7</b>
+              <p>aktuálna dokumentácia knižníc — menej vymyslených API</p>
+            </div>
+            <div class="tool-card fragment fade-up" data-fragment-index="2"><b>mcp-atlassian</b>
+              <p>Jira a Confluence priamo v kontexte agenta</p>
+            </div>
+            <div class="tool-card fragment fade-up" data-fragment-index="2"><b>Claude in Chrome</b>
+              <p>verifier klikne do UI a pozrie sa sám</p>
+            </div>
+          </div>
+        </div>
+        <h1 class="punch sm s35c-line fragment fade-up" data-fragment-index="3">Tokens are the new cloud bill.<br><span
+            class="accent">Context is the new cache.</span></h1>
+        <aside class="notes">
+          Tri stĺpce na kliky: čo púšťame dnu, čo pustíme von, čo pridá kontext.
+
+          „Workflow s viacerými agentmi bez dobrých nástrojov rýchlo zahltí kontext aj rozpočet. [klik] Takže najprv
+          menej šumu dnu: context-mode pošle veľké výstupy do sandboxu a do kontextu pustí len zhrnutie. RTK spraví to
+          isté pre bežné CLI príkazy. A code-review-graph nechá agenta hľadať v grafe kódu namiesto čítania celých
+          súborov.
+
+          [klik] Menej slov von: caveman. Agent rozpráva ako jaskynný muž — technicky presne, len bez zdvorilostných
+          fráz. ‚Me agent. Me no waste token.‘
+
+          [klik] A menej hádania: context7 dá aktuálnu dokumentáciu knižníc, takže agent nevymýšľa API. Atlassian MCP
+          prinesie Jiru a Confluence. A Claude in Chrome dovolí verifierovi pozrieť sa do UI na vlastné oči.
+
+          [klik] Tokeny sú nový účet za cloud. A kontext je nová cache — kto s ním vie narábať, platí menej a dostane
+          viac.“
+
+          Čas: 0:45 · Prechod: „A tu sa vždy niekto spýta…“
+        </aside>
+      </section>
+
+      <!-- S36 -->
+      <section id="s36" data-timing="60">
+        <div class="big-q q36">„Why can't everyone just use Claude Code however they want?"</div>
+        <div class="dev-row">
+          <div class="dev-card  fragment fade-up" data-fragment-index="0">
+            <div class="dc-face">🤓</div>
+            <div class="dc-name">Dev A</div>
+            <div class="dc-setup"><code>~/my-prompts/<br>v7-final-FINAL.txt</code></div>
+            <div class="dc-quote">„mám na to prompt"</div>
+          </div>
+          <div class="dev-card  fragment fade-up" data-fragment-index="1">
+            <div class="dc-face">🙃</div>
+            <div class="dc-name">Dev B</div>
+            <div class="dc-setup"><span>úplne iný workflow</span></div>
+            <div class="dc-quote">„ja to robím inak"</div>
+          </div>
+          <div class="dev-card yolo fragment fade-up" data-fragment-index="2">
+            <div class="dc-face">😎</div>
+            <div class="dc-name">Dev C</div>
+            <div class="dc-setup"><code class="danger">--dangerously-<br>skip-permissions</code></div>
+            <div class="dc-quote">„potvrdzovanie ma otravovalo"</div>
+          </div>
+          <div class="dev-card  fragment fade-up" data-fragment-index="3">
+            <div class="dc-face">📜</div>
+            <div class="dc-name">Dev D</div>
+            <div class="dc-setup">
+              <div class="scroll-md">
+                <div>CLAUDE.md<br># Rules<br>1. Always…<br>2. Never…<br>3. Unless…<br>…<br>4 812.
+                  Also…<br>CLAUDE.md<br># Rules<br>1. Always…<br>2. Never…<br>3. Unless…</div>
+              </div>
+            </div>
+            <div class="dc-quote">„je to tam niekde"</div>
+          </div>
+          <div class="dev-card  fragment fade-up" data-fragment-index="4">
+            <div class="dc-face">🤝</div>
+            <div class="dc-name">Dev E</div>
+            <div class="dc-setup"><span class="bro">trust me bro</span></div>
+            <div class="dc-quote">„u mňa to funguje"</div>
+          </div>
+        </div>
+        <div class="chaos-meter fragment fade-in" data-fragment-index="5">
+          <span class="cm-label">organizational chaos</span>
+          <div class="cm-bar"><i></i></div><b>5 devs = 5 companies</b>
+        </div>
+        <aside class="notes">
+          Karty vývojárov na kliky, na konci merač chaosu.
+
+          „Prečo nemôže každý používať Claude Code, ako sa mu páči? Môže. Pozrime sa, ako to dopadne.
+
+          [klik] Vývojár A má priečinok vlastných promptov, verzia sedem, final, FINAL. [klik] B to robí úplne inak.
+          [klik] C beží v YOLO mode, lebo ho otravovalo potvrdzovanie. [klik] D má CLAUDE.md na päťtisíc riadkov, ktoré
+          nikto nečítal — ani model. [klik] A E? Trust me bro.
+
+          [klik] Pre jednotlivca to funguje. Pre firmu je to päť rôznych firiem v jednej.“
+
+          Čas: 1:00 · Prechod: karty zošednú, objaví sa mriežka otázok.
+        </aside>
+      </section>
+
+      <!-- S37 -->
+      <section id="s37" data-timing="60">
+        <div class="kicker">Čo musí organizácia vedieť</div>
+        <div class="q-grid">
+          <div class="q-card" style="--qc: var(--blue)"><span class="q-n">01</span><span class="q-ic">🧩</span>
+            <h3>Ako delíme prácu?</h3>
+          </div>
+          <div class="q-card" style="--qc: var(--blue)"><span class="q-n">02</span><span class="q-ic">📚</span>
+            <h3>Odkiaľ je kontext?</h3>
+          </div>
+          <div class="q-card" style="--qc: var(--green)"><span class="q-n">03</span><span class="q-ic">🔧</span>
+            <h3>Aké nástroje smú použiť agenti?</h3>
+          </div>
+          <div class="q-card" style="--qc: var(--green)"><span class="q-n">04</span><span class="q-ic">✅</span>
+            <h3>Ako validujeme?</h3>
+          </div>
+          <div class="q-card" style="--qc: var(--amber)"><span class="q-n">05</span><span class="q-ic">🚦</span>
+            <h3>Aké quality gates potrebujeme?</h3>
+          </div>
+          <div class="q-card" style="--qc: var(--amber)"><span class="q-n">06</span><span class="q-ic">🧠</span>
+            <h3>Kto udržiava znalosti?</h3>
+          </div>
+          <div class="q-card" style="--qc: var(--purple)"><span class="q-n">07</span><span class="q-ic">🎓</span>
+            <h3>Ako onboardujeme?</h3>
+          </div>
+          <div class="q-card" style="--qc: var(--purple)"><span class="q-n">08</span><span class="q-ic">🔄</span>
+            <h3>Ako vymeníme model?</h3>
+          </div>
+        </div>
+        <h1 class="punch sm s37-line fragment fade-up">Standardize the process,<br><span class="accent">not the
+            intelligence.</span></h1>
+        <aside class="notes">
+          „Ako firma potrebujete poznať odpovede na tieto otázky. Nie preto, že by sme milovali procesy. Ale inak
+          nevieme, čo sa v kóde deje, nevieme zaškoliť nových ľudí a nevieme prejsť na iný model.
+
+          [klik] Štandardizujte proces, nie inteligenciu. Nikomu nebudeme predpisovať, ako má rozmýšľať. Ale chceme
+          vedieť, ako práca tečie systémom.“
+
+          Čas: 1:00 · Prechod: ikona modelu zo S35 sa vráti do stredu.
+        </aside>
+      </section>
+
+      <!-- S38 -->
+      <section id="s38" data-timing="60">
+        <div class="center">
+          <div class="frame">
+            <div class="slot"><span class="m m1">Claude</span><span class="m m2">GPT</span><span
+                class="m m3">Gemini</span></div>
+          </div>
+          <h1 class="punch md fragment fade-up">Own the workflow.</h1>
+          <h1 class="punch md accent fragment fade-up">Rent the intelligence.</h1>
+        </div>
+        <aside class="notes">
+          Kartičky v slote sa striedajú samy, rám stojí.
+
+          „Modely sa budú meniť. Claude, GPT, Gemini — každých pár mesiacov bude na špici niekto iný. Ak máte proces
+          prilepený na jeden model, zakaždým začínate od nuly. [klik] Takže: workflow si vlastnite. [klik] Inteligenciu
+          si prenajímajte.“
+
+          Čas: 1:00 · Prechod: rám sa rozloží na vrstvy.
+        </aside>
+      </section>
+
+      <!-- S39 -->
+      <section id="s39" data-timing="45">
+        <div class="row s39-row">
+          <div class="building">
+            <div class="layer roof">MODEL <span class="muted">(replaceable)</span></div>
+            <div class="layer">Workflow orchestration</div>
+            <div class="layer">Evaluations</div>
+            <div class="layer">Knowledge</div>
+            <div class="layer">Tools</div>
+            <div class="layer">Skills</div>
+            <div class="layer">Agent definitions</div>
+            <div class="layer">Context</div>
+          </div>
+          <div class="col vcenter">
+            <h1 class="punch sm">The durable asset<br>is <span class="accent">everything else.</span></h1>
+            <div class="sub">Všetko sú to súbory v gite.</div>
+          </div>
+        </div>
+        <aside class="notes">
+          Vrstvy sa samy postavia zdola nahor; strecha sa na konci vymení.
+
+          „Toto je to, čo vám ostane. Kontext. Definície agentov. Skills. Nástroje. Znalosti. Evaluácie. Orchestrácia
+          workflow. Všetko sú to súbory v gite, váš majetok. Strechu vymeníte za jedno popoludnie. Základy staviate
+          roky.“
+
+          Čas: 0:45 · Prechod: obrazovka stmavne, ostane blikajúci kurzor ako na S01.
+        </aside>
+      </section>
+
+      <!-- ═════════════ ZÁVER ═════════════ -->
+
+      <!-- S40 -->
+      <section id="s40" data-timing="75">
+        <div class="vcenter">
+          <div class="term lg commits" id="t-s40" data-demo="s40" data-play="enter" data-delay="400">
+            <div class="term-head"><i></i><i></i><i></i>~/naw — git</div>
+            <div class="term-body">
+              <div class="play"></div>
+              <div class="ln fragment commit"><span class="amber">3f1a9c2</span> feat: reliable agentic dev is a systems
+                problem, not a prompting problem</div>
+              <div class="ln fragment commit"><span class="amber">8be04d7</span> feat: context + decomposition +
+                specialists + validation + guardrails</div>
+              <div class="ln fragment commit"><span class="amber">1c7d5e0</span> feat: own the workflow, rent the
+                intelligence</div>
+            </div>
+          </div>
+        </div>
+        <aside class="notes">
+          Commity na kliky.
+
+          „Ak si z dneška zapamätáte tri veci, nech sú to tieto tri commity. [klik] Prvý: spoľahlivý vývoj s agentmi je
+          problém systému, nie promptov. [klik] Druhý: kontext, rozdelenie práce, špecializovaní agenti, nástroje,
+          kontrola a guardrails robia AI predvídateľným. [klik] A tretí: workflow si vlastnite, inteligenciu si
+          prenajímajte.
+
+          … Na začiatku sme mali juniora, ktorý povedal ‚Certainly!‘ a vyrobil 47 súborov. Model sme nevymenili. Dali
+          sme mu tím, proces a kontext.“
+
+          Čas: 1:15 · Prechod: terminál sa vyčistí (clear).
+        </aside>
+      </section>
+
+      <!-- S41 -->
+      <section id="s41" data-timing="45">
+        <div class="term xl fullterm" id="t-s41" data-demo="s41" data-play="enter" data-delay="800">
+          <div class="term-head"><i></i><i></i><i></i>~/naw — claude</div>
+          <div class="term-body"></div>
+        </div>
+        <div class="footer-id">Tomas Blanarik · Visma / Norvato</div>
+        <aside class="notes">
+          „A toto je jediný krok workflow, ktorý sa zautomatizovať nedá. Human intervention required. Ďakujem — a teraz
+          vaše otázky.“
+
+          Počas Q&A slide nechaj tak. Keď padne otázka na konkrétny mechanizmus, vráť sa na S31 (guardrails) alebo S33
+          (celý workflow) cez prehľad slidov (kláves O).
+
+          Čas: 0:45 + Q&A 8:00
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="vendor/reveal/reveal.js"></script>
+  <script src="vendor/reveal/plugin/notes.js"></script>
+  <script src="demos/demos.js"></script>
+<script src="js/doom.js"></script>
+  <script src="js/deck.js"></script>
+</body>
+
+</html>
